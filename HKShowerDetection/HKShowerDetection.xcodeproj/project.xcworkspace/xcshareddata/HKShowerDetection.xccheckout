@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E0025AA3-36B9-4A1C-B281-4761508D9636</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HKShowerDetection</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EAEDC038CED05F63CA56A9CCA7E3187CCE8F2693</key>
+		<string>https://github.com/etran04/HKShowerDetection.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HKShowerDetection.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EAEDC038CED05F63CA56A9CCA7E3187CCE8F2693</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/etran04/HKShowerDetection.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EAEDC038CED05F63CA56A9CCA7E3187CCE8F2693</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EAEDC038CED05F63CA56A9CCA7E3187CCE8F2693</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HKShowerDetection</string>
+		</dict>
+	</array>
+</dict>
+</plist>

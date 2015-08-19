@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BF065C75-4BB9-423F-8A2D-B0E308971B93</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HKArc</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EAEDC038CED05F63CA56A9CCA7E3187CCE8F2693</key>
+		<string>https://github.com/etran04/HKArcSample.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HKArc.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EAEDC038CED05F63CA56A9CCA7E3187CCE8F2693</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/etran04/HKArcSample.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EAEDC038CED05F63CA56A9CCA7E3187CCE8F2693</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EAEDC038CED05F63CA56A9CCA7E3187CCE8F2693</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HKArc</string>
+		</dict>
+	</array>
+</dict>
+</plist>
