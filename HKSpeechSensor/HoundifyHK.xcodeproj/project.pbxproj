@@ -1,0 +1,653 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		073BD0F81B70383C006C0588 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 073BD0F71B70383C006C0588 /* libz.dylib */; };
+		073BD0FA1B703841006C0588 /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 073BD0F91B703841006C0588 /* libbz2.dylib */; };
+		073BD0FC1B703867006C0588 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073BD0FB1B703867006C0588 /* Accelerate.framework */; };
+		073BD0FE1B70386D006C0588 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073BD0FD1B70386D006C0588 /* AudioToolbox.framework */; };
+		073BD1001B703873006C0588 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073BD0FF1B703873006C0588 /* Foundation.framework */; };
+		073BD1021B70387B006C0588 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073BD1011B70387B006C0588 /* UIKit.framework */; };
+		073BD1041B703881006C0588 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073BD1031B703881006C0588 /* AVFoundation.framework */; };
+		073BD1061B70388B006C0588 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 073BD1051B70388B006C0588 /* libc++.dylib */; };
+		074860621B69765700798B19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074860611B69765700798B19 /* AppDelegate.swift */; };
+		074860641B69765700798B19 /* MainRecordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074860631B69765700798B19 /* MainRecordVC.swift */; };
+		074860671B69765700798B19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 074860651B69765700798B19 /* Main.storyboard */; };
+		074860691B69765700798B19 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 074860681B69765700798B19 /* Images.xcassets */; };
+		0748606C1B69765700798B19 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0748606A1B69765700798B19 /* LaunchScreen.xib */; };
+		074860781B69765700798B19 /* HoundifyHKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074860771B69765700798B19 /* HoundifyHKTests.swift */; };
+		074860891B69774600798B19 /* libHoundSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 074860881B69774600798B19 /* libHoundSDK.a */; };
+		074862301B701E3000798B19 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748622F1B701E3000798B19 /* SwiftyJSON.swift */; };
+		07EF0B341B7A6A4B00B0E37C /* greenMic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07EF0B321B7A6A4B00B0E37C /* greenMic.png */; };
+		07EF0B351B7A6A4B00B0E37C /* redMic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07EF0B331B7A6A4B00B0E37C /* redMic.png */; };
+		07EF0B371B7A72CD00B0E37C /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EF0B361B7A72CD00B0E37C /* Parse.framework */; };
+		07EF0B391B7A72D000B0E37C /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EF0B381B7A72D000B0E37C /* Bolts.framework */; };
+		07EF0B3B1B7A732100B0E37C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EF0B3A1B7A732100B0E37C /* CFNetwork.framework */; };
+		07EF0B3D1B7A732800B0E37C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EF0B3C1B7A732800B0E37C /* CoreGraphics.framework */; };
+		07EF0B3F1B7A732E00B0E37C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EF0B3E1B7A732E00B0E37C /* CoreLocation.framework */; };
+		07EF0B411B7A733400B0E37C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EF0B401B7A733400B0E37C /* QuartzCore.framework */; };
+		07EF0B431B7A733A00B0E37C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EF0B421B7A733A00B0E37C /* Security.framework */; };
+		07EF0B451B7A734800B0E37C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EF0B441B7A734800B0E37C /* StoreKit.framework */; };
+		07EF0B471B7A735000B0E37C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EF0B461B7A735000B0E37C /* SystemConfiguration.framework */; };
+		07EF0B491B7A735A00B0E37C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EF0B481B7A735A00B0E37C /* libsqlite3.dylib */; };
+		07EF0B4B1B7A736100B0E37C /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EF0B4A1B7A736100B0E37C /* Accounts.framework */; };
+		07EF0B4D1B7A736600B0E37C /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EF0B4C1B7A736600B0E37C /* Social.framework */; };
+		07EF0B4F1B7A743200B0E37C /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EF0B4E1B7A743200B0E37C /* ParseUI.framework */; };
+		07EF0B541B7A772C00B0E37C /* ParseLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EF0B531B7A772C00B0E37C /* ParseLoginVC.swift */; };
+		07FBDC861B82660F00BA0B54 /* Harman_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FBDC851B82660F00BA0B54 /* Harman_Logo.png */; };
+		07FBDC881B8268EE00BA0B54 /* ParseSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FBDC871B8268EE00BA0B54 /* ParseSignUpVC.swift */; };
+		07FBDC8A1B827BC600BA0B54 /* InitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FBDC891B827BC600BA0B54 /* InitialVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		074860721B69765700798B19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 074860541B69765700798B19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0748605B1B69765700798B19;
+			remoteInfo = HoundifyHK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		073BD0F71B70383C006C0588 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		073BD0F91B703841006C0588 /* libbz2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.dylib; path = usr/lib/libbz2.dylib; sourceTree = SDKROOT; };
+		073BD0FB1B703867006C0588 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		073BD0FD1B70386D006C0588 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		073BD0FF1B703873006C0588 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		073BD1011B70387B006C0588 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		073BD1031B703881006C0588 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		073BD1051B70388B006C0588 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		0748605C1B69765700798B19 /* HoundifyHK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoundifyHK.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		074860601B69765700798B19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		074860611B69765700798B19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		074860631B69765700798B19 /* MainRecordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRecordVC.swift; sourceTree = "<group>"; };
+		074860661B69765700798B19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		074860681B69765700798B19 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0748606B1B69765700798B19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		074860711B69765700798B19 /* HoundifyHKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoundifyHKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		074860761B69765700798B19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		074860771B69765700798B19 /* HoundifyHKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoundifyHKTests.swift; sourceTree = "<group>"; };
+		074860841B69774600798B19 /* Hound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hound.h; sourceTree = "<group>"; };
+		074860851B69774600798B19 /* HoundSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoundSDK.h; sourceTree = "<group>"; };
+		074860861B69774600798B19 /* HoundTextSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoundTextSearch.h; sourceTree = "<group>"; };
+		074860871B69774600798B19 /* HoundVoiceSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoundVoiceSearch.h; sourceTree = "<group>"; };
+		074860881B69774600798B19 /* libHoundSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libHoundSDK.a; sourceTree = "<group>"; };
+		0748622E1B70155700798B19 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		0748622F1B701E3000798B19 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		07EF0B321B7A6A4B00B0E37C /* greenMic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenMic.png; sourceTree = "<group>"; };
+		07EF0B331B7A6A4B00B0E37C /* redMic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redMic.png; sourceTree = "<group>"; };
+		07EF0B361B7A72CD00B0E37C /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		07EF0B381B7A72D000B0E37C /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		07EF0B3A1B7A732100B0E37C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		07EF0B3C1B7A732800B0E37C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		07EF0B3E1B7A732E00B0E37C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		07EF0B401B7A733400B0E37C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		07EF0B421B7A733A00B0E37C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		07EF0B441B7A734800B0E37C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		07EF0B461B7A735000B0E37C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		07EF0B481B7A735A00B0E37C /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		07EF0B4A1B7A736100B0E37C /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		07EF0B4C1B7A736600B0E37C /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		07EF0B4E1B7A743200B0E37C /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		07EF0B531B7A772C00B0E37C /* ParseLoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseLoginVC.swift; sourceTree = "<group>"; };
+		07FBDC851B82660F00BA0B54 /* Harman_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Harman_Logo.png; sourceTree = "<group>"; };
+		07FBDC871B8268EE00BA0B54 /* ParseSignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseSignUpVC.swift; sourceTree = "<group>"; };
+		07FBDC891B827BC600BA0B54 /* InitialVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		074860591B69765700798B19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07EF0B4F1B7A743200B0E37C /* ParseUI.framework in Frameworks */,
+				07EF0B4D1B7A736600B0E37C /* Social.framework in Frameworks */,
+				07EF0B4B1B7A736100B0E37C /* Accounts.framework in Frameworks */,
+				07EF0B491B7A735A00B0E37C /* libsqlite3.dylib in Frameworks */,
+				07EF0B471B7A735000B0E37C /* SystemConfiguration.framework in Frameworks */,
+				07EF0B451B7A734800B0E37C /* StoreKit.framework in Frameworks */,
+				07EF0B431B7A733A00B0E37C /* Security.framework in Frameworks */,
+				07EF0B411B7A733400B0E37C /* QuartzCore.framework in Frameworks */,
+				07EF0B3F1B7A732E00B0E37C /* CoreLocation.framework in Frameworks */,
+				07EF0B3D1B7A732800B0E37C /* CoreGraphics.framework in Frameworks */,
+				07EF0B3B1B7A732100B0E37C /* CFNetwork.framework in Frameworks */,
+				073BD1061B70388B006C0588 /* libc++.dylib in Frameworks */,
+				073BD1041B703881006C0588 /* AVFoundation.framework in Frameworks */,
+				073BD1021B70387B006C0588 /* UIKit.framework in Frameworks */,
+				073BD1001B703873006C0588 /* Foundation.framework in Frameworks */,
+				07EF0B371B7A72CD00B0E37C /* Parse.framework in Frameworks */,
+				073BD0FE1B70386D006C0588 /* AudioToolbox.framework in Frameworks */,
+				073BD0FC1B703867006C0588 /* Accelerate.framework in Frameworks */,
+				073BD0FA1B703841006C0588 /* libbz2.dylib in Frameworks */,
+				07EF0B391B7A72D000B0E37C /* Bolts.framework in Frameworks */,
+				073BD0F81B70383C006C0588 /* libz.dylib in Frameworks */,
+				074860891B69774600798B19 /* libHoundSDK.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0748606E1B69765700798B19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		074860531B69765700798B19 = {
+			isa = PBXGroup;
+			children = (
+				0748605E1B69765700798B19 /* HoundifyHK */,
+				074860741B69765700798B19 /* HoundifyHKTests */,
+				0748605D1B69765700798B19 /* Products */,
+				074860811B69774600798B19 /* HoundSDK */,
+				077529601B794818007FB121 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0748605D1B69765700798B19 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0748605C1B69765700798B19 /* HoundifyHK.app */,
+				074860711B69765700798B19 /* HoundifyHKTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0748605E1B69765700798B19 /* HoundifyHK */ = {
+			isa = PBXGroup;
+			children = (
+				074860681B69765700798B19 /* Images.xcassets */,
+				0748606A1B69765700798B19 /* LaunchScreen.xib */,
+				074860651B69765700798B19 /* Main.storyboard */,
+				074860611B69765700798B19 /* AppDelegate.swift */,
+				07EF0B501B7A748F00B0E37C /* VCs */,
+				0748605F1B69765700798B19 /* Supporting Files */,
+			);
+			path = HoundifyHK;
+			sourceTree = "<group>";
+		};
+		0748605F1B69765700798B19 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07EF0B521B7A74E300B0E37C /* Code */,
+				07EF0B511B7A74CD00B0E37C /* Images */,
+				074860601B69765700798B19 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		074860741B69765700798B19 /* HoundifyHKTests */ = {
+			isa = PBXGroup;
+			children = (
+				074860771B69765700798B19 /* HoundifyHKTests.swift */,
+				074860751B69765700798B19 /* Supporting Files */,
+			);
+			path = HoundifyHKTests;
+			sourceTree = "<group>";
+		};
+		074860751B69765700798B19 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				074860761B69765700798B19 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		074860811B69774600798B19 /* HoundSDK */ = {
+			isa = PBXGroup;
+			children = (
+				074860821B69774600798B19 /* include */,
+				074860881B69774600798B19 /* libHoundSDK.a */,
+			);
+			path = HoundSDK;
+			sourceTree = "<group>";
+		};
+		074860821B69774600798B19 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				074860831B69774600798B19 /* HoundSDK */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		074860831B69774600798B19 /* HoundSDK */ = {
+			isa = PBXGroup;
+			children = (
+				074860841B69774600798B19 /* Hound.h */,
+				074860851B69774600798B19 /* HoundSDK.h */,
+				074860861B69774600798B19 /* HoundTextSearch.h */,
+				074860871B69774600798B19 /* HoundVoiceSearch.h */,
+			);
+			path = HoundSDK;
+			sourceTree = "<group>";
+		};
+		077529601B794818007FB121 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07EF0B4E1B7A743200B0E37C /* ParseUI.framework */,
+				07EF0B4C1B7A736600B0E37C /* Social.framework */,
+				07EF0B4A1B7A736100B0E37C /* Accounts.framework */,
+				07EF0B481B7A735A00B0E37C /* libsqlite3.dylib */,
+				07EF0B461B7A735000B0E37C /* SystemConfiguration.framework */,
+				07EF0B441B7A734800B0E37C /* StoreKit.framework */,
+				07EF0B421B7A733A00B0E37C /* Security.framework */,
+				07EF0B401B7A733400B0E37C /* QuartzCore.framework */,
+				07EF0B3E1B7A732E00B0E37C /* CoreLocation.framework */,
+				07EF0B3C1B7A732800B0E37C /* CoreGraphics.framework */,
+				07EF0B3A1B7A732100B0E37C /* CFNetwork.framework */,
+				07EF0B381B7A72D000B0E37C /* Bolts.framework */,
+				07EF0B361B7A72CD00B0E37C /* Parse.framework */,
+				073BD0F91B703841006C0588 /* libbz2.dylib */,
+				073BD0F71B70383C006C0588 /* libz.dylib */,
+				073BD1051B70388B006C0588 /* libc++.dylib */,
+				073BD1031B703881006C0588 /* AVFoundation.framework */,
+				073BD1011B70387B006C0588 /* UIKit.framework */,
+				073BD0FF1B703873006C0588 /* Foundation.framework */,
+				073BD0FD1B70386D006C0588 /* AudioToolbox.framework */,
+				073BD0FB1B703867006C0588 /* Accelerate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		07EF0B501B7A748F00B0E37C /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				07FBDC891B827BC600BA0B54 /* InitialVC.swift */,
+				07EF0B531B7A772C00B0E37C /* ParseLoginVC.swift */,
+				07FBDC871B8268EE00BA0B54 /* ParseSignUpVC.swift */,
+				074860631B69765700798B19 /* MainRecordVC.swift */,
+			);
+			name = VCs;
+			sourceTree = "<group>";
+		};
+		07EF0B511B7A74CD00B0E37C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				07FBDC851B82660F00BA0B54 /* Harman_Logo.png */,
+				07EF0B331B7A6A4B00B0E37C /* redMic.png */,
+				07EF0B321B7A6A4B00B0E37C /* greenMic.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		07EF0B521B7A74E300B0E37C /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				0748622F1B701E3000798B19 /* SwiftyJSON.swift */,
+				0748622E1B70155700798B19 /* Bridging-Header.h */,
+			);
+			name = Code;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0748605B1B69765700798B19 /* HoundifyHK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0748607B1B69765700798B19 /* Build configuration list for PBXNativeTarget "HoundifyHK" */;
+			buildPhases = (
+				074860581B69765700798B19 /* Sources */,
+				074860591B69765700798B19 /* Frameworks */,
+				0748605A1B69765700798B19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HoundifyHK;
+			productName = HoundifyHK;
+			productReference = 0748605C1B69765700798B19 /* HoundifyHK.app */;
+			productType = "com.apple.product-type.application";
+		};
+		074860701B69765700798B19 /* HoundifyHKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0748607E1B69765700798B19 /* Build configuration list for PBXNativeTarget "HoundifyHKTests" */;
+			buildPhases = (
+				0748606D1B69765700798B19 /* Sources */,
+				0748606E1B69765700798B19 /* Frameworks */,
+				0748606F1B69765700798B19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				074860731B69765700798B19 /* PBXTargetDependency */,
+			);
+			name = HoundifyHKTests;
+			productName = HoundifyHKTests;
+			productReference = 074860711B69765700798B19 /* HoundifyHKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		074860541B69765700798B19 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Harman International";
+				TargetAttributes = {
+					0748605B1B69765700798B19 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = CWEESB29TK;
+					};
+					074860701B69765700798B19 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 0748605B1B69765700798B19;
+					};
+				};
+			};
+			buildConfigurationList = 074860571B69765700798B19 /* Build configuration list for PBXProject "HoundifyHK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 074860531B69765700798B19;
+			productRefGroup = 0748605D1B69765700798B19 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0748605B1B69765700798B19 /* HoundifyHK */,
+				074860701B69765700798B19 /* HoundifyHKTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0748605A1B69765700798B19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07EF0B351B7A6A4B00B0E37C /* redMic.png in Resources */,
+				074860671B69765700798B19 /* Main.storyboard in Resources */,
+				07EF0B341B7A6A4B00B0E37C /* greenMic.png in Resources */,
+				07FBDC861B82660F00BA0B54 /* Harman_Logo.png in Resources */,
+				0748606C1B69765700798B19 /* LaunchScreen.xib in Resources */,
+				074860691B69765700798B19 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0748606F1B69765700798B19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		074860581B69765700798B19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				074862301B701E3000798B19 /* SwiftyJSON.swift in Sources */,
+				07FBDC8A1B827BC600BA0B54 /* InitialVC.swift in Sources */,
+				074860641B69765700798B19 /* MainRecordVC.swift in Sources */,
+				07EF0B541B7A772C00B0E37C /* ParseLoginVC.swift in Sources */,
+				074860621B69765700798B19 /* AppDelegate.swift in Sources */,
+				07FBDC881B8268EE00BA0B54 /* ParseSignUpVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0748606D1B69765700798B19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				074860781B69765700798B19 /* HoundifyHKTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		074860731B69765700798B19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0748605B1B69765700798B19 /* HoundifyHK */;
+			targetProxy = 074860721B69765700798B19 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		074860651B69765700798B19 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				074860661B69765700798B19 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0748606A1B69765700798B19 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0748606B1B69765700798B19 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		074860791B69765700798B19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0748607A1B69765700798B19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0748607C1B69765700798B19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					HoundSDK/include,
+				);
+				INFOPLIST_FILE = HoundifyHK/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HoundSDK",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HoundifyHK/Bridging-Header.h";
+				VALID_ARCHS = "armv7 armv7s arm64";
+			};
+			name = Debug;
+		};
+		0748607D1B69765700798B19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					HoundSDK/include,
+				);
+				INFOPLIST_FILE = HoundifyHK/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HoundSDK",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HoundifyHK/Bridging-Header.h";
+				VALID_ARCHS = "armv7 armv7s arm64";
+			};
+			name = Release;
+		};
+		0748607F1B69765700798B19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HoundifyHKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HoundifyHK.app/HoundifyHK";
+			};
+			name = Debug;
+		};
+		074860801B69765700798B19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HoundifyHKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HoundifyHK.app/HoundifyHK";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		074860571B69765700798B19 /* Build configuration list for PBXProject "HoundifyHK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				074860791B69765700798B19 /* Debug */,
+				0748607A1B69765700798B19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0748607B1B69765700798B19 /* Build configuration list for PBXNativeTarget "HoundifyHK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0748607C1B69765700798B19 /* Debug */,
+				0748607D1B69765700798B19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0748607E1B69765700798B19 /* Build configuration list for PBXNativeTarget "HoundifyHKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0748607F1B69765700798B19 /* Debug */,
+				074860801B69765700798B19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 074860541B69765700798B19 /* Project object */;
+}
