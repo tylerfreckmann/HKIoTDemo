@@ -28,3 +28,11 @@ Overview of Classes
 
    modules
 
+Wake Up Scenario
+~~~~~~~~~~~~~~~~~
+
+.. toctree::
+   :maxdepth: 2
+
+   wakeup
+
