@@ -8,8 +8,7 @@ var longerPadding = ",,,,,".split(",").join("%2C");
 
 // Used in "prepareToLeaveHouse"
 var finalMsgForLeaveHouse = "";
-var initialGreetingURL = "";
-
+var initialMessage = "";
 
 /* Sets the alarm in the cloud, and notifies user of the result through push notifcation. */
 Parse.Cloud.define("setCloudAlarm", function(request, response) {
@@ -96,15 +95,10 @@ Parse.Cloud.define("prepareToLeaveHouse", function (request, response) {
     pushQuery.equalTo("appName", "HKRules");
      
     // Get TTS URL for  initial check message  
-    var message = "%2C let me check if the house is safe right now. Give me a second or two.".split(" ").join("%20");
-    var initialCheckURL =  baseSpeechURL + longerPadding + "Hi%20" + request.params.username + message + "&return_url=1";          
+    initialMessage = "Hi%20" + request.params.username + "%2C let me check if the house is safe right now. Give me a second or two.".split(" ").join("%20");       
 
-    // Requests for the initial check TTS 
-    Parse.Cloud.httpRequest({url: initialCheckURL}).then(function(initialCheckMP3) {
-        initialGreetingURL = initialCheckMP3.text;
-        // Request for the endpoint URL
-        return getSmartThingsEndpointURL(user);
-    }).then(function(endPointResponse) {
+    // Request for the endpoint URL
+    getSmartThingsEndpointURL(user).then(function(endPointResponse) {
         var json = JSON.parse(endPointResponse.text);
         var endPointURL = json[0]["url"];
         var apiCallURL = "https://graph.api.smartthings.com" + endPointURL;
@@ -127,7 +121,6 @@ Parse.Cloud.define("prepareToLeaveHouse", function (request, response) {
                         "alert": "Checking security of your home & getting your weather forecast!",
                         "content-available": 1,
                         "leaveFlag": 1, 
-                        "initialCheckURL":  initialGreetingURL,
                         "recapMessageURL": recapMessageMP3.text,
                         "timeStamp": getCurrentTime()
                     },
@@ -181,12 +174,16 @@ var parseListOfSensors = function(sensors, request) {
         finalMsgForLeaveHouse = 
             baseSpeechURL 
             + speechPadding
+            + initialMessage 
+            + speechPadding
             + "Hi%20" 
             + request.params.username 
             + "%2C All of your sensors are closed. Your home is safe and secured. ".split(" ").join("%20")
     } else {
         finalMsgForLeaveHouse =  
             baseSpeechURL 
+            + speechPadding
+            + initialMessage 
             + speechPadding
             + "Hi%20" 
             + request.params.username 
