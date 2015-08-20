@@ -93,7 +93,7 @@ Parse.Cloud.define("prepareToLeaveHouse", function (request, response) {
     pushQuery.equalTo("appName", "HKRules");
      
     // Get TTS URL for  initial check message  
-    initialMessage = "Hi%20" + request.params.username.split(" ").join("%20") + "%2C let me check if the house is safe right now. Give me a second or two.".split(" ").join("%20");      
+    initialMessage = "Hi%20" + request.params.username.split(" ").join("%20") + "%2C let me check if the house is safe right now. ".split(" ").join("%20");      
     // Request for the endpoint URL
     getSmartThingsEndpointURL(user).then(function(endPointResponse) {
         var json = JSON.parse(endPointResponse.text);
@@ -173,7 +173,6 @@ var parseListOfSensors = function(sensors, request) {
             + speechPadding
             + initialMessage 
             + speechPadding
-            + "Hi%20" 
             + request.params.username.split(" ").join("%20") 
             + "%2C All of your sensors are closed. Your home is safe and secured. ".split(" ").join("%20")
     } else {
@@ -182,7 +181,6 @@ var parseListOfSensors = function(sensors, request) {
             + speechPadding
             + initialMessage 
             + speechPadding
-            + "Hi%20" 
             + request.params.username.split(" ").join("%20") 
             + "%2C I am currently seeing some open sensors".split(" ").join("%20");
 
