@@ -36,3 +36,18 @@ Wake Up Scenario
 
    wakeup
 
+Shower Scenario
+~~~~~~~~~~~~~~~~~
+
+.. toctree::
+   :maxdepth: 2
+
+   shower
+
+Leave Home Scenario
+~~~~~~~~~~~~~~~~~
+
+.. toctree::
+   :maxdepth: 2
+
+   leave
