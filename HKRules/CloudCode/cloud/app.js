@@ -70,7 +70,7 @@ app.post('/login', function(req, res) {
 			});
 		},
 		error: function(user, error) {
-			res.render('loginfailed', {t: httpResponse.data.access_token});
+			res.render('res', {message: 'logIn error: '+error.message});
 		}
 	});
 });
