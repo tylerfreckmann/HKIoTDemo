@@ -57,8 +57,6 @@ Parse.Cloud.define("showerAlert", function(request, response) {
         + request.params.showerTime.split(" ").join("%20") 
         + "&return_url=1";
 
-    console.log(showerAlertURL);
-
     Parse.Cloud.httpRequest({
         url: showerAlertURL,
         success: function(showerAlertResponse) {
@@ -95,8 +93,7 @@ Parse.Cloud.define("prepareToLeaveHouse", function (request, response) {
     pushQuery.equalTo("appName", "HKRules");
      
     // Get TTS URL for  initial check message  
-    initialMessage = "Hi%20" + request.params.username + "%2C let me check if the house is safe right now. Give me a second or two.".split(" ").join("%20");       
-
+    initialMessage = "Hi%20" + request.params.username.split(" ").join("%20") + "%2C let me check if the house is safe right now. Give me a second or two.".split(" ").join("%20");      
     // Request for the endpoint URL
     getSmartThingsEndpointURL(user).then(function(endPointResponse) {
         var json = JSON.parse(endPointResponse.text);
@@ -177,7 +174,7 @@ var parseListOfSensors = function(sensors, request) {
             + initialMessage 
             + speechPadding
             + "Hi%20" 
-            + request.params.username 
+            + request.params.username.split(" ").join("%20") 
             + "%2C All of your sensors are closed. Your home is safe and secured. ".split(" ").join("%20")
     } else {
         finalMsgForLeaveHouse =  
@@ -186,7 +183,7 @@ var parseListOfSensors = function(sensors, request) {
             + initialMessage 
             + speechPadding
             + "Hi%20" 
-            + request.params.username 
+            + request.params.username.split(" ").join("%20") 
             + "%2C I am currently seeing some open sensors".split(" ").join("%20");
 
         for (i = 0; i < listOpenSensors.length; i++) {
@@ -250,7 +247,6 @@ Parse.Cloud.define("turnOnLights", function(request, response) {
         var json = JSON.parse(httpResponse.text);
         var epURL = json[0]["url"];
         var endpointURL = "https://graph.api.smartthings.com" + epURL + "/switches/on/0";
-        console.log(endpointURL);
         return Parse.Cloud.httpRequest({
             url: endpointURL,
             headers: {
@@ -269,26 +265,20 @@ Parse.Cloud.define("getGreetingAndWeatherTTSURL", function(request, response) {
     var user = Parse.User.current();
     var wakeConfig = user.get("wakeConfig");
     var greeting;
-    console.log("trying to get greeting and weather tts url for user: "+user.username);
     wakeConfig.fetch().then(function(wakeConfig) {
         greeting = wakeConfig.get("greeting");
         greeting = greeting.split(" ").join("%20");
-        console.log("here is the greeting: "+greeting);
         if (request.params.weather) {
-            console.log("weather was true with location: "+request.params.latitude+","+request.params.longitude);
             return getWeatherMsg(request.params.latitude, request.params.longitude);
         } else {
             var promise = new Parse.Promise();
             promise.resolve("");
-            console.log("weather was false");
             return promise;
         }
     }).then(function(weatherMessage) {
         var ttsURL = baseSpeechURL+speechPadding+greeting+"%20"+weatherMessage+"&return_url=1";
-        console.log("trying to get ttsurl with request: "+ttsURL);
         return Parse.Cloud.httpRequest({url: ttsURL});
     }).then(function(httpResponse) {
-        console.log("successfully got ttsurl: "+httpResponse.text);
         response.success(httpResponse.text);
     }, function(error) {
         response.error(error);
