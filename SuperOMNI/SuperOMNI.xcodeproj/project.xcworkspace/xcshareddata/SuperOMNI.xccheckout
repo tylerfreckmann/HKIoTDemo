@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>88609126-E3E5-4F69-B680-1F5E157AF766</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SuperOMNI</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D178290F619C4DF676369078FC3C6FF0616A6978</key>
+		<string>https://github.com/etran04/SuperOMNI-iBeacon.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SuperOMNI.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D178290F619C4DF676369078FC3C6FF0616A6978</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/etran04/SuperOMNI-iBeacon.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D178290F619C4DF676369078FC3C6FF0616A6978</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D178290F619C4DF676369078FC3C6FF0616A6978</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SuperOMNI-Project</string>
+		</dict>
+	</array>
+</dict>
+</plist>

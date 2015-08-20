@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C94D8CFA-7238-4550-90B6-79473927E3B0</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ForgetMeNot</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>69E1F12A-5172-4546-93ED-4FD6359C2ECA</key>
+		<string>https://github.com/cwagdev/ForgetMeNot.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ForgetMeNot.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>69E1F12A-5172-4546-93ED-4FD6359C2ECA</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/cwagdev/ForgetMeNot.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>69E1F12A-5172-4546-93ED-4FD6359C2ECA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>69E1F12A-5172-4546-93ED-4FD6359C2ECA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ForgetMeNot</string>
+		</dict>
+	</array>
+</dict>
+</plist>
