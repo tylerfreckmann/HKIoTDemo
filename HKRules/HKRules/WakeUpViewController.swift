@@ -145,8 +145,8 @@ class WakeUpViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 cell?.accessoryType = UITableViewCellAccessoryType.None
                 wakeConfig["lights"] = false
             } else {
-                cell?.accessoryType = UITableViewCellAccessoryType.Checkmark
-                wakeConfig["lights"] = true
+//                cell?.accessoryType = UITableViewCellAccessoryType.Checkmark
+//                wakeConfig["lights"] = true
                 user.fetchInBackgroundWithBlock({ (user, error) -> Void in
                     if let user = user as! PFUser! {
                         var token: AnyObject? = user["sttoken"]
