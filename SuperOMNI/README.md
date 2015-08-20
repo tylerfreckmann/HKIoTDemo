@@ -10,8 +10,8 @@ Terms used:
 <br>SuperOmni - Omni 10 with embedded iBeacon (Major: 1010, Minor: 1)
 <br>SmartThings - Omni 20 with RFDuino acting as iBeacon beside it (Major: 1100, Minor: 1) 
 
-<b> For Seonman: I reccomend using two speakers that are the same (Omni 10/Omni 10) or (Omni 20/Omni 20). 
-<b> The beacons should be labeled with 'Super' or 'Smart'.
+<b> For Seonman: I reccomend using two speakers that are the same (Omni 10/Omni 10) or (Omni 20/Omni 20). </b>
+<b> The beacons should be labeled with 'Super' or 'Smart'. </b>
 
 <b> The speaker that should be near the 'Super' beacon should be named "SuperOmni" through the HK Page app. </b>
 
