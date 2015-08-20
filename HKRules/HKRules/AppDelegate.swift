@@ -132,11 +132,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, HKWPlayerEventHandlerDele
             
             if userInfo["leaveFlag"] != nil {
                 // Received a notification from prepareToLeaveHouse event triggered in cloud
-                // Play initial check TTS through playStreaming
-                let initialCheckURL = userInfo["initialCheckURL"]! as! String
-                tracksQueue.append(initialCheckURL)
-                playFromQueue()
-                println("Added initial leave house check TTS to queue")
                 
                 let finalCheckURL = userInfo["recapMessageURL"]! as! String
                 tracksQueue.append(finalCheckURL)
