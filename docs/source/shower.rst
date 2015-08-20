@@ -19,4 +19,6 @@ Shower Scenario
 
 8. The shower sensor begins listening to the environment, and sends a packet of sound data to the ACR Cloud for analysis. If the data resembles a shower sound, then the ACR Cloud sends back a positive response, which activates a timer on the shower sensor. The shower sensor keeps listening to the environment and sending data to ACR Cloud for analysis for the duration of the timer. If the shower sound is still playing before the timer runs out, the shower sensor sends an event to Parse which will trigger a shower alert.
 
-9. If Parse receives a notification from the shower sensor that the shower is running longer than the user had configured, it will send a push notification t
+9. If Parse receives a notification from the shower sensor that the shower is running longer than the user had configured, it will get TTS data from the TTS API and send a push notification to the HK Rules App on the user's iOS device.
+
+10. When the HK Rules AppDelegate receives the push notification from Parse, it will play an alert about the shower through the Harman speakers.
