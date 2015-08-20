@@ -13,9 +13,9 @@ Terms used:
 <b> For Seonman: I reccomend using two speakers that are the same (Omni 10/Omni 10) or (Omni 20/Omni 20). 
 <b> The beacons should be labeled with 'Super' or 'Smart'.
 
-<b> The speaker that should be near the 'Super' beacon should be named "SuperOmni" through the HK Page app. 
+<b> The speaker that should be near the 'Super' beacon should be named "SuperOmni" through the HK Page app. </b>
 
-<b> The speaker that should be near the 'Smart' beacon should be named "SmartThings" through the HK Page app. 
+<b> The speaker that should be near the 'Smart' beacon should be named "SmartThings" through the HK Page app. </b>
 
 Almost all of iBeacon functionality with HK speakers are written in RWTItemsViewController.m.
 
