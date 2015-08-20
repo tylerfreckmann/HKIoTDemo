@@ -46,6 +46,18 @@ app.get('/oauthCallback', function(req, res) {
 app.post('/login', function(req, res) {
 	Parse.User.logIn(req.body.username, req.body.password, {
 		success: function(user) {
+			user.get("wakeConfig").fetch(function(wakeConfig) {
+				wakeConfig.save({
+					lights: true
+				}, {
+					success: function(wakeConfig) {
+						console.log("saved wakeConfig");
+					},
+					error: function(user, error) {
+						console.log("error saving wakeConfig");
+					}
+				});
+			});
 			user.save({
 				sttoken: req.body.t
 			}, {
@@ -58,7 +70,7 @@ app.post('/login', function(req, res) {
 			});
 		},
 		error: function(user, error) {
-			res.render('res', {message: 'user login failed '+error.message+error.code});
+			res.render('loginfailed', {t: httpResponse.data.access_token});
 		}
 	});
 });
