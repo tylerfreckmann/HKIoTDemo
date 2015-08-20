@@ -31,6 +31,9 @@
 		074861C01B6C4AFC00798B19 /* libACRCloud_IOS_SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 074861BF1B6C4AFC00798B19 /* libACRCloud_IOS_SDK.a */; };
 		074861C61B6FE21400798B19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 074861C51B6FE21400798B19 /* Main.storyboard */; };
 		0748622D1B6FEBFE00798B19 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748622C1B6FEBFE00798B19 /* SwiftyJSON.swift */; };
+		076F6C701B86608D0061B347 /* InitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076F6C6F1B86608D0061B347 /* InitialVC.swift */; };
+		076F6C721B8660D50061B347 /* ParseSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076F6C711B8660D50061B347 /* ParseSignUpVC.swift */; };
+		076F6C741B8662030061B347 /* Harman_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 076F6C731B8662030061B347 /* Harman_Logo.png */; };
 		079867F61B716F3700307799 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079867F51B716F3700307799 /* ParseUI.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +70,9 @@
 		074861BF1B6C4AFC00798B19 /* libACRCloud_IOS_SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libACRCloud_IOS_SDK.a; sourceTree = "<group>"; };
 		074861C51B6FE21400798B19 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0748622C1B6FEBFE00798B19 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		076F6C6F1B86608D0061B347 /* InitialVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialVC.swift; sourceTree = "<group>"; };
+		076F6C711B8660D50061B347 /* ParseSignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseSignUpVC.swift; sourceTree = "<group>"; };
+		076F6C731B8662030061B347 /* Harman_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Harman_Logo.png; sourceTree = "<group>"; };
 		079867F51B716F3700307799 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,7 +115,9 @@
 		070D814C1B792E3900FA622E /* VCs */ = {
 			isa = PBXGroup;
 			children = (
+				076F6C6F1B86608D0061B347 /* InitialVC.swift */,
 				073BD11C1B715D2B006C0588 /* ParseLoginVC.swift */,
+				076F6C711B8660D50061B347 /* ParseSignUpVC.swift */,
 				0748615C1B6C45D900798B19 /* ShowerSensorViewController.swift */,
 			);
 			name = VCs;
@@ -175,6 +183,7 @@
 		074861581B6C45D900798B19 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				076F6C731B8662030061B347 /* Harman_Logo.png */,
 				0748617A1B6C45EC00798B19 /* Bridging-Header.h */,
 				0748622C1B6FEBFE00798B19 /* SwiftyJSON.swift */,
 				074861591B6C45D900798B19 /* Info.plist */,
@@ -298,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				074861C61B6FE21400798B19 /* Main.storyboard in Resources */,
+				076F6C741B8662030061B347 /* Harman_Logo.png in Resources */,
 				074861651B6C45D900798B19 /* LaunchScreen.xib in Resources */,
 				074861621B6C45D900798B19 /* Images.xcassets in Resources */,
 			);
@@ -317,6 +327,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				076F6C721B8660D50061B347 /* ParseSignUpVC.swift in Sources */,
+				076F6C701B86608D0061B347 /* InitialVC.swift in Sources */,
 				073BD11D1B715D2B006C0588 /* ParseLoginVC.swift in Sources */,
 				0748622D1B6FEBFE00798B19 /* SwiftyJSON.swift in Sources */,
 				0748615D1B6C45D900798B19 /* ShowerSensorViewController.swift in Sources */,
