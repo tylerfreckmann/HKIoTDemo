@@ -19,6 +19,7 @@ class MainRecordVC: UIViewController, CLLocationManagerDelegate{
     @IBOutlet weak var logoutBtn: UIButton!
     
     let locManager = CLLocationManager()
+    var g_alert: UIAlertController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,7 @@ class MainRecordVC: UIViewController, CLLocationManagerDelegate{
         textView.layer.cornerRadius = 10
         textView.text = "";
         
-        // Ask for location services for weather update when leaving 
+        // Ask for location services for weather update
         locManager.delegate = self
         //locManager.requestWhenInUseAuthorization()
         locManager.requestAlwaysAuthorization()
@@ -115,14 +116,24 @@ class MainRecordVC: UIViewController, CLLocationManagerDelegate{
             CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedAlways){
                 currentLocation = locManager.location
         }
+        g_alert = UIAlertController(title: "Triggered event", message: "Attempting to call cloud code. This notification will disappear if the cloud code finished correctly", preferredStyle: .Alert)
+        g_alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { action in
+            self.dismissViewControllerAnimated(false, completion: nil)
+        }))
         
+        self.presentViewController(g_alert, animated: false, completion: nil)
         // Trigger event in Parse Cloud to send a push notification to HKRules
-        PFCloud.callFunctionInBackground("prepareToLeaveHouse", withParameters: ["username":username! as! String, "locationLatitude": currentLocation.coordinate.latitude, "locationLongitude":currentLocation.coordinate.longitude]) {
+        PFCloud.callFunctionInBackground("prepareToLeaveHouse",
+            withParameters:
+                ["username":username! as! String,
+                    "locationLatitude": currentLocation.coordinate.latitude,
+                    "locationLongitude":currentLocation.coordinate.longitude]) {
             (response: AnyObject?, error: NSError?) -> Void in
             if error != nil {
                 println("Error with triggering event.")
             } else {
-                println("Triggered event in the cloud!")
+                println("Successfully triggered event in the cloud!")
+                self.dismissViewControllerAnimated(false, completion: nil)
             }
         }
         
