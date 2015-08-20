@@ -135,6 +135,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, HKWPlayerEventHandlerDele
                 
                 let finalCheckURL = userInfo["recapMessageURL"]! as! String
                 tracksQueue.append(finalCheckURL)
+                playFromQueue()
                 println("Added finalSpeech TTS to queue")
             }
             
