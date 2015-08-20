@@ -13,7 +13,7 @@ The entities involved in this demo are:
 	iOS application representing a sensor in the home (specifically detecting the lengths of showers)
 *Speech Sensor*
 	iOS application representing a voice recognition sensor 
-*`SmartThings <http://www.smartthings.com/developers/>`__*
+*SmartThings*
 	Third party IoT devices such as contact sensors, temperature sensors, etc 
 
 .. figure::  images/iotdemocontextdiagram.png 
