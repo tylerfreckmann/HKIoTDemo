@@ -15,6 +15,7 @@ class StopAlarmViewController: UIViewController, CLLocationManagerDelegate{
     var wakeConfig: PFObject!
     var weather: Bool!
     var lights: Bool!
+    var greeting: String!
     var appDelegate: AppDelegate!
     
     let locationManager = CLLocationManager()
@@ -60,12 +61,14 @@ class StopAlarmViewController: UIViewController, CLLocationManagerDelegate{
             long = 0
         }
         
-        PFCloud.callFunctionInBackground("getGreetingAndWeatherTTSURL", withParameters: ["weather": weather, "latitude": lat, "longitude": long]) { (response, error) -> Void in
-            if error == nil {
-                var ttsURL = response as! String
-                self.appDelegate.appendToQueue(ttsURL)
-            } else {
-                println(error)
+        if weather==true || !greeting.isEmpty {
+            PFCloud.callFunctionInBackground("getGreetingAndWeatherTTSURL", withParameters: ["weather": weather, "latitude": lat, "longitude": long]) { (response, error) -> Void in
+                if error == nil {
+                    var ttsURL = response as! String
+                    self.appDelegate.appendToQueue(ttsURL)
+                } else {
+                    println(error)
+                }
             }
         }
     }
@@ -79,6 +82,7 @@ class StopAlarmViewController: UIViewController, CLLocationManagerDelegate{
         println("called populateData")
         weather = wakeConfig["weather"] as! Bool
         lights = wakeConfig["lights"] as! Bool
+        greeting = wakeConfig["greeting"] as! String
     }
     
 

@@ -43,6 +43,11 @@ class ChooseScenarioViewController: UIViewController {
                 
             })
         }
+        
+//        println("trying new tts engine")
+//        HKWControlHandler.sharedInstance().playStreamingMedia("http://api.voicerss.org/?key=8768e7a066a7443faa66380f7204ee96&src=HI%20%20Eric%20HELLOOO&hl=en-au", withCallback: { (success) -> Void in
+//            println("success")
+//        })
     }
 
     override func didReceiveMemoryWarning() {

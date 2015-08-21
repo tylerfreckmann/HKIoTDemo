@@ -16,6 +16,7 @@
 		07FBDC8D1B82932400BA0B54 /* InitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FBDC8C1B82932400BA0B54 /* InitialVC.swift */; };
 		07FBDC8F1B82938000BA0B54 /* ParseSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FBDC8E1B82938000BA0B54 /* ParseSignUpVC.swift */; };
 		07FBDC941B8293F000BA0B54 /* Harman_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FBDC931B8293F000BA0B54 /* Harman_Logo.png */; };
+		F82039F11B86AAD3004428FC /* SpeakerSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82039F01B86AAD3004428FC /* SpeakerSelectionTableViewController.swift */; };
 		F8E4D00B1B6FDE8F00D4255B /* libHKWirelessHD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E4D0081B6FDE8F00D4255B /* libHKWirelessHD.a */; };
 		F8E4D00C1B6FDE8F00D4255B /* License-iOS-Omni.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F8E4D0091B6FDE8F00D4255B /* License-iOS-Omni.pdf */; };
 		F8E4D00D1B6FDE8F00D4255B /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F8E4D00A1B6FDE8F00D4255B /* README.md */; };
@@ -72,6 +73,7 @@
 		07FBDC8C1B82932400BA0B54 /* InitialVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialVC.swift; sourceTree = "<group>"; };
 		07FBDC8E1B82938000BA0B54 /* ParseSignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseSignUpVC.swift; sourceTree = "<group>"; };
 		07FBDC931B8293F000BA0B54 /* Harman_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Harman_Logo.png; sourceTree = "<group>"; };
+		F82039F01B86AAD3004428FC /* SpeakerSelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerSelectionTableViewController.swift; sourceTree = "<group>"; };
 		F8E4D0021B6FDE8F00D4255B /* DeviceGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceGroup.h; sourceTree = "<group>"; };
 		F8E4D0031B6FDE8F00D4255B /* DeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceInfo.h; sourceTree = "<group>"; };
 		F8E4D0041B6FDE8F00D4255B /* HKWControlHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKWControlHandler.h; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		070D813D1B790F5000FA622E /* VCs */ = {
 			isa = PBXGroup;
 			children = (
+				F82039F01B86AAD3004428FC /* SpeakerSelectionTableViewController.swift */,
 				07FBDC8B1B8292CB00BA0B54 /* Login/SignUp VCs */,
 				F8E4D01F1B74285400D4255B /* ChooseScenarioViewController.swift */,
 				F8E4D02F1B7934B200D4255B /* WakeUp */,
@@ -465,6 +468,7 @@
 				F8E4D0201B74285400D4255B /* ChooseScenarioViewController.swift in Sources */,
 				F8F5AA7E1B69B370002E84D8 /* AppDelegate.swift in Sources */,
 				07FBDC8D1B82932400BA0B54 /* InitialVC.swift in Sources */,
+				F82039F11B86AAD3004428FC /* SpeakerSelectionTableViewController.swift in Sources */,
 				070D813F1B7910AB00FA622E /* ParseLoginVC.swift in Sources */,
 				F8E4D02A1B751AD800D4255B /* MMPDeepSleepPreventer.m in Sources */,
 				07FBDC8F1B82938000BA0B54 /* ParseSignUpVC.swift in Sources */,

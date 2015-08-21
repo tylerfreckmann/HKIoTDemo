@@ -10,26 +10,22 @@
 	<string>HKRules</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>5341ECDB8E780F45D367CC56A21A432FC34CB3C8</key>
-		<string>https://github.com/tylerfreckmann/HKRules.git</string>
 		<key>DF5CA1AB7BD449BB6233C7E5D2CD9F70274C7979</key>
 		<string>https://github.com/tylerfreckmann/HKIoTDemo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>HKRules.xcodeproj</string>
+	<string>HKRules/HKRules.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>5341ECDB8E780F45D367CC56A21A432FC34CB3C8</key>
-		<string>../..</string>
 		<key>DF5CA1AB7BD449BB6233C7E5D2CD9F70274C7979</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/tylerfreckmann/HKRules.git</string>
+	<string>https://github.com/tylerfreckmann/HKIoTDemo.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>5341ECDB8E780F45D367CC56A21A432FC34CB3C8</string>
+	<string>DF5CA1AB7BD449BB6233C7E5D2CD9F70274C7979</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -38,15 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>DF5CA1AB7BD449BB6233C7E5D2CD9F70274C7979</string>
 			<key>IDESourceControlWCCName</key>
-			<string></string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>5341ECDB8E780F45D367CC56A21A432FC34CB3C8</string>
-			<key>IDESourceControlWCCName</key>
-			<string>HKRules</string>
+			<string>HKIoTDemo</string>
 		</dict>
 	</array>
 </dict>

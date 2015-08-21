@@ -94,6 +94,7 @@ Parse.Cloud.define("prepareToLeaveHouse", function (request, response) {
      
     // Get TTS URL for  initial check message  
     initialMessage = "Hi%20" + request.params.username.split(" ").join("%20") + "%2C let me check if the house is safe right now. ".split(" ").join("%20");      
+    console.log(finalMsgForLeaveHouse);
     // Request for the endpoint URL
     getSmartThingsEndpointURL(user).then(function(endPointResponse) {
         var json = JSON.parse(endPointResponse.text);
@@ -101,13 +102,19 @@ Parse.Cloud.define("prepareToLeaveHouse", function (request, response) {
         var apiCallURL = "https://graph.api.smartthings.com" + endPointURL;
         var checkSensorsURL = apiCallURL + "/contactSensors?access_token=" + user.get("sttoken");
         // Get list of contact sensors (doors, windows, etc...)
+            console.log(finalMsgForLeaveHouse);
+
         return Parse.Cloud.httpRequest({url: checkSensorsURL});
     }).then(function(sensors) {
         parseListOfSensors(sensors, request);
+            console.log(finalMsgForLeaveHouse);
+
         // Gets the current weather forecast
         return getWeatherMsg(request.params.locationLatitude, request.params.locationLongitude);
     }).then(function(weatherMessage) {
         var recapMessageURL = finalMsgForLeaveHouse + weatherMessage + "&return_url=1";
+            console.log(recapMessageURL);
+
         // Request for the final TTS MP3 url
         return Parse.Cloud.httpRequest({url: recapMessageURL});
     }).then(function(recapMessageMP3) {
@@ -135,7 +142,7 @@ var getSmartThingsEndpointURL = function(user) {
     var requestEndPointURL = "https://graph.api.smartthings.com/api/smartapps/endpoints?access_token="
         + user.get("sttoken");
     return Parse.Cloud.httpRequest({url: requestEndPointURL});
-}
+};
 
 /* Helper function for getting the current time */
 var getCurrentTime = function() {
@@ -144,7 +151,7 @@ var getCurrentTime = function() {
     alertTime.getMinutes();
     alertTime.getSeconds();
     return alertTime;
-}
+};
 
 /* Helper function for going through the list of sensors, checking if any are open and creating TTS for them. */
 var parseListOfSensors = function(sensors, request) {
@@ -188,7 +195,7 @@ var parseListOfSensors = function(sensors, request) {
             finalMsgForLeaveHouse += listOpenSensors[i];
         }
     }
-}
+};
 
 /* Recieves the weather forecast given a coordinate. Returns a promise of a weather forecast. */
 var getWeatherMsg = function(latitude, longitude) {
@@ -197,12 +204,14 @@ var getWeatherMsg = function(latitude, longitude) {
     var weatherURL = "https://api.forecast.io/forecast/" 
         + weatherAPIKey 
         + "/" + latitude 
-        + "," + longitude;  
+        + "," + longitude;
+    console.log(weatherURL);
 
     // Get the weather format in JSON 
     Parse.Cloud.httpRequest( {
         url: weatherURL, 
         success: function(weatherJSON) {
+            console.log("called success");
             var weatherJson = JSON.parse(weatherJSON.text);
             var weatherMessage =  
                 speechPadding + "Today, the weather is " + weatherJson["currently"]["summary"]
@@ -220,23 +229,12 @@ var getWeatherMsg = function(latitude, longitude) {
             promise.resolve(weatherMessage);
         }, 
         error: function () {
+            console.log("weather failed");
             promise.reject("getWeatherMsg failed");
         }
     });
     return promise;
-}
-
-/* Parse Cloud method for getting the weather forecast in String */ 
-Parse.Cloud.define("getWeather", function (request, response) {
-    getWeatherMsg(request.params.latitude, request.params.longitude).then(function(weatherMessage) {
-        var ttsURL = baseSpeechURL+speechPadding+weatherMessage+"&return_url=1";
-        return Parse.Cloud.httpRequest({url: ttsURL});
-    }).then(function(httpResponse) {
-        response.success(httpResponse.text);
-    }, function(error) {
-        response.error("failed to get weatherMessage");
-    });
-});
+};
 
 /* Parse Cloud method for turning on SmartThings lights */
 Parse.Cloud.define("turnOnLights", function(request, response) {
