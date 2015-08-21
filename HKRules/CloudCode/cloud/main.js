@@ -2,9 +2,9 @@ require('cloud/app.js')
 
 // Global variables used for speech URLS 
 var weatherAPIKey = "2746bc27d6d47ddd627f76d17870dab3";
-var baseSpeechURL = "http://tts-api.com/tts.mp3?q=";
-var speechPadding = ",,,".split(",").join("%2C");
-var longerPadding = ",,,,,".split(",").join("%2C");
+var baseSpeechURL = "http://api.voicerss.org/?key=8768e7a066a7443faa66380f7204ee96&hl=en-us&f=48khz_16bit_mono&src=";
+var speechPadding = ",,,,,".split(",").join("%2C");
+var longerPadding = ",,,,,,,".split(",").join("%2C");
 
 // Used in "prepareToLeaveHouse"
 var finalMsgForLeaveHouse = "";
@@ -52,35 +52,27 @@ Parse.Cloud.define("showerAlert", function(request, response) {
     
     // Convert alert message to TTS URL to get mp3 to stream from
     var showerAlertURL = baseSpeechURL 
-        + speechPadding
+        + longerPadding
         + "Alert%2C You have showered for ".split(" ").join("%20") 
-        + request.params.showerTime.split(" ").join("%20") 
-        + "&return_url=1";
+        + request.params.showerTime.split(" ").join("%20");
 
-    Parse.Cloud.httpRequest({
-        url: showerAlertURL,
-        success: function(showerAlertResponse) {
-            // Push to HKRules phone
-            Parse.Push.send({
-                where: pushQuery,
-                data: {
-                    "alert": "You showered for " + request.params.showerTime,
-                    "content-available": 1,
-                    "showerAlertURL":  showerAlertResponse.text
-                },
-                    push_time: alertTime
-            },{ success: function() {
-                response.success("push for " + request.params.username + " scheduled.");
-            },
-                error: function(error) {
-                response.error("push errored");         
-            }
-            }); //end push
+    // Push to HKRules phone
+    Parse.Push.send({
+        where: pushQuery,
+        data: {
+            "alert": "You showered for " + request.params.showerTime,
+            "content-available": 1,
+            "showerAlertURL":  showerAlertURL
         },
-        error: function() {
-            response.error("GET request failed for showerAlertURL");
+            push_time: alertTime
+    },{
+        success: function() {
+            response.success("push for " + request.params.username + " scheduled.");
+        },
+        error: function(error) {
+            response.error("push errored");         
         }
-    });        
+    }); //end push     
 });
 
 /* Called when client is about to leave the house, checking home security and weather forecast */ 
@@ -107,22 +99,20 @@ Parse.Cloud.define("prepareToLeaveHouse", function (request, response) {
         // Gets the current weather forecast
         return getWeatherMsg(request.params.locationLatitude, request.params.locationLongitude);
     }).then(function(weatherMessage) {
-        var recapMessageURL = finalMsgForLeaveHouse + weatherMessage + "&return_url=1";
-        // Request for the final TTS MP3 url
-        return Parse.Cloud.httpRequest({url: recapMessageURL});
-    }).then(function(recapMessageMP3) {
+        var recapMessageURL = finalMsgForLeaveHouse + weatherMessage;
         // Push to HKRules 
+        console.log(recapMessageURL);
         return Parse.Push.send({
-                    where: pushQuery,
-                    data: {
-                        "alert": "Checking security of your home & getting your weather forecast!",
-                        "content-available": 1,
-                        "leaveFlag": 1, 
-                        "recapMessageURL": recapMessageMP3.text,
-                        "timeStamp": getCurrentTime()
-                    },
-                    push_time: alertTime
-                });
+                where: pushQuery,
+                data: {
+                    "alert": "Checking security of your home & getting your weather forecast!",
+                    "content-available": 1,
+                    "leaveFlag": 1, 
+                    "recapMessageURL": recapMessageURL,
+                    "timeStamp": getCurrentTime()
+                },
+                push_time: alertTime
+            });
     }).then(function() {
         response.success("push for " + request.params.username + " scheduled.");
     }, function(error) {
@@ -170,7 +160,7 @@ var parseListOfSensors = function(sensors, request) {
     if (!anyOpenSensors) {
         finalMsgForLeaveHouse = 
             baseSpeechURL 
-            + speechPadding
+            + longerPadding
             + initialMessage 
             + speechPadding
             + request.params.username.split(" ").join("%20") 
@@ -178,7 +168,7 @@ var parseListOfSensors = function(sensors, request) {
     } else {
         finalMsgForLeaveHouse =  
             baseSpeechURL 
-            + speechPadding
+            + longerPadding
             + initialMessage 
             + speechPadding
             + request.params.username.split(" ").join("%20") 
@@ -226,18 +216,6 @@ var getWeatherMsg = function(latitude, longitude) {
     return promise;
 }
 
-/* Parse Cloud method for getting the weather forecast in String */ 
-Parse.Cloud.define("getWeather", function (request, response) {
-    getWeatherMsg(request.params.latitude, request.params.longitude).then(function(weatherMessage) {
-        var ttsURL = baseSpeechURL+speechPadding+weatherMessage+"&return_url=1";
-        return Parse.Cloud.httpRequest({url: ttsURL});
-    }).then(function(httpResponse) {
-        response.success(httpResponse.text);
-    }, function(error) {
-        response.error("failed to get weatherMessage");
-    });
-});
-
 /* Parse Cloud method for turning on SmartThings lights */
 Parse.Cloud.define("turnOnLights", function(request, response) {
     var user = Parse.User.current();
@@ -274,10 +252,8 @@ Parse.Cloud.define("getGreetingAndWeatherTTSURL", function(request, response) {
             return promise;
         }
     }).then(function(weatherMessage) {
-        var ttsURL = baseSpeechURL+speechPadding+greeting+"%20"+weatherMessage+"&return_url=1";
-        return Parse.Cloud.httpRequest({url: ttsURL});
-    }).then(function(httpResponse) {
-        response.success(httpResponse.text);
+        var ttsURL = baseSpeechURL+speechPadding+greeting+"%20"+weatherMessage;
+        response.success(ttsURL);
     }, function(error) {
         response.error(error);
     });
