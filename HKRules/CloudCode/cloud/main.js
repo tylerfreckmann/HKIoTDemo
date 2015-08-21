@@ -3,8 +3,8 @@ require('cloud/app.js')
 // Global variables used for speech URLS 
 var weatherAPIKey = "2746bc27d6d47ddd627f76d17870dab3";
 var baseSpeechURL = "http://api.voicerss.org/?key=8768e7a066a7443faa66380f7204ee96&hl=en-us&f=48khz_16bit_mono&src=";
-var speechPadding = ",,,,,".split(",").join("%2C");
-var longerPadding = ",,,,,,,".split(",").join("%2C");
+var speechPadding = ",,,,,,,".split(",").join("%2C");
+var longerPadding = ",,,,,,,,,,".split(",").join("%2C");
 
 // Used in "prepareToLeaveHouse"
 var finalMsgForLeaveHouse = "";
