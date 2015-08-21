@@ -11,7 +11,7 @@ Architecture Overview
 .. toctree::
    :maxdepth: 2
 
-   index
+   context
  
 Overview of Classes 
 ~~~~~~~~~~~~~~~~~~~~
