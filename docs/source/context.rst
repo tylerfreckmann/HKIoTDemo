@@ -1,5 +1,5 @@
 Architecture Overview
-=====================================
+=====================
 
 Welcome to our demo on how the Harman Wireless HD Audio System can be integrated into the Internet of Things. The `Wireless HD Audio SDK <http://developer.harman.com>`__ allows one to develop applications that connect HD Wireless speakers to other devices in the home.
 

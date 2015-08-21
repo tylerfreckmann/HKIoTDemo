@@ -6,7 +6,7 @@ Welcome to our demo on how the Harman Wireless HD Audio System can be integrated
 Contents:
 
 Architecture Overview
-~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 .. toctree::
    :maxdepth: 2
@@ -14,7 +14,7 @@ Architecture Overview
    context
  
 Overview of Classes 
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 .. toctree::
    :maxdepth: 2
@@ -22,7 +22,7 @@ Overview of Classes
    modules
 
 Wake Up Scenario
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 
 .. toctree::
    :maxdepth: 2
@@ -30,7 +30,7 @@ Wake Up Scenario
    wakeup
 
 Shower Scenario
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 .. toctree::
    :maxdepth: 2
@@ -38,9 +38,17 @@ Shower Scenario
    shower
 
 Leave Home Scenario
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 .. toctree::
    :maxdepth: 2
 
    leave
+
+References
+~~~~~~~~~~
+
+.. toctree::
+   :maxdepth: 2
+
+   references
