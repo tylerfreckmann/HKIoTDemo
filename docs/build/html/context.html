@@ -23,8 +23,9 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="HKIoTDemo 1.0 documentation" href="#" />
-    <link rel="next" title="Welcome to HKIoTDemo’s documentation!" href="context.html" />
+    <link rel="top" title="HKIoTDemo 1.0 documentation" href="index.html" />
+    <link rel="next" title="Overview of Classes" href="modules.html" />
+    <link rel="prev" title="Welcome to HKIoTDemo’s documentation!" href="index.html" />
    
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
@@ -40,46 +41,22 @@
   <div class="section" id="welcome-to-hkiotdemo-s-documentation">
 <h1>Welcome to HKIoTDemo&#8217;s documentation!<a class="headerlink" href="#welcome-to-hkiotdemo-s-documentation" title="Permalink to this headline">¶</a></h1>
 <p>Welcome to our demo on how the Harman Wireless HD Audio System can be integrated into the Internet of Things. The <a class="reference external" href="http://developer.harman.com">Wireless HD Audio SDK</a> allows one to develop applications that connect HD Wireless speakers to other devices in the home.</p>
-<p>Contents:</p>
-<div class="section" id="architecture-overview">
-<h2>Architecture Overview<a class="headerlink" href="#architecture-overview" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="context.html">Welcome to HKIoTDemo&#8217;s documentation!</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="overview-of-classes">
-<h2>Overview of Classes<a class="headerlink" href="#overview-of-classes" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">Overview of Classes</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="wake-up-scenario">
-<h2>Wake Up Scenario<a class="headerlink" href="#wake-up-scenario" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wakeup.html">Wake Up Scenario</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="shower-scenario">
-<h2>Shower Scenario<a class="headerlink" href="#shower-scenario" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="shower.html">Shower Scenario</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="leave-home-scenario">
-<h2>Leave Home Scenario<a class="headerlink" href="#leave-home-scenario" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="leave.html">Leave House Scenario</a></li>
-</ul>
-</div>
+<p>The entities involved in this demo are:</p>
+<dl class="docutils">
+<dt><em>HK Rules Application</em></dt>
+<dd>iOS application that functions as a central hub for interfacing with the Harman speakers.</dd>
+<dt><em>Parse Cloud</em></dt>
+<dd>Backend architecture for IoT functionality, and interfaces with third parties.</dd>
+<dt><em>Shower Sensor</em></dt>
+<dd>iOS application representing a sensor in the home (specifically detecting the lengths of showers).</dd>
+<dt><em>Speech Sensor</em></dt>
+<dd>iOS application representing a voice recognition sensor.</dd>
+<dt><em>SmartThings</em></dt>
+<dd>Third party IoT devices such as contact sensors, temperature sensors, etc. (<a class="reference external" href="http://www.smartthings.com/developers/">SmartThings</a> )</dd>
+</dl>
+<p>Have trouble reading image? <a class="reference external" href="http://hkiotdemo.readthedocs.org/en/latest/_images/iotdemocontextdiagram.png">Click Here!</a></p>
+<div class="figure">
+<img alt="_images/iotdemocontextdiagram.png" src="_images/iotdemocontextdiagram.png" />
 </div>
 </div>
 
@@ -88,30 +65,19 @@
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="#">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Welcome to HKIoTDemo&#8217;s documentation!</a><ul>
-<li><a class="reference internal" href="#architecture-overview">Architecture Overview</a></li>
-<li><a class="reference internal" href="#overview-of-classes">Overview of Classes</a></li>
-<li><a class="reference internal" href="#wake-up-scenario">Wake Up Scenario</a></li>
-<li><a class="reference internal" href="#shower-scenario">Shower Scenario</a></li>
-<li><a class="reference internal" href="#leave-home-scenario">Leave Home Scenario</a></li>
-</ul>
-</li>
-</ul>
-<div class="relations">
+        <div class="sphinxsidebarwrapper"><div class="relations">
 <h3>Related Topics</h3>
 <ul>
-  <li><a href="#">Documentation overview</a><ul>
-      <li>Next: <a href="context.html" title="next chapter">Welcome to HKIoTDemo&#8217;s documentation!</a></li>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to HKIoTDemo&#8217;s documentation!</a></li>
+      <li>Next: <a href="modules.html" title="next chapter">Overview of Classes</a></li>
   </ul></li>
 </ul>
 </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/index.txt"
+      <li><a href="_sources/context.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -140,7 +106,7 @@
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
       
       |
-      <a href="_sources/index.txt"
+      <a href="_sources/context.txt"
           rel="nofollow">Page source</a>
     </div>
 

@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Wake Up Scenario &mdash; HKIoTDemo 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="HKIoTDemo 1.0 documentation" href="index.html" />
+    <link rel="next" title="Shower Scenario" href="shower.html" />
+    <link rel="prev" title="Overview of Classes" href="modules.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="wake-up-scenario">
+<h1>Wake Up Scenario<a class="headerlink" href="#wake-up-scenario" title="Permalink to this headline">¶</a></h1>
+<p><strong>Have trouble reading image?</strong> <a href="#id1"><span class="problematic" id="id2">`Click Here! &lt;http://hkiotdemo.readthedocs.org/en/latest/_images/wakeupsd.png`__</span></a></p>
+<div class="figure">
+<img alt="_images/wakeupsd.png" src="_images/wakeupsd.png" />
+</div>
+<ol class="arabic simple">
+<li>The user fires up the HK Rules iOS app and enters their username, password, email, and name into the &#8220;Sign Up&#8221; page.</li>
+<li>The &#8220;Sign Up&#8221; page signs the user up in the Parse Cloud to create their &#8220;HK Rules account&#8221;, which creates a &#8220;User&#8221; object representing that user. If the sign-up fails, the user is redirected back to the &#8220;Sign Up&#8221; page.</li>
+<li>If the sign-up is successful, the user is directed to the &#8220;Choose Scenario&#8221; page, which initializes the HKWControlHandler object.</li>
+<li>On the &#8220;Choose Scenario&#8221; page, the user taps &#8220;Wake Up&#8221;, which brings them to the &#8220;Wake Up&#8221; page.</li>
+<li>The &#8220;Wake Up&#8221; page requests the currentUser from Parse.</li>
+<li>The &#8220;Wake Up&#8221; page queries the currentUser for the WakeConfig object.</li>
+<li>The user then configures the wakeConfig alarm data.</li>
+<li>If the user chooses the &#8220;Turn on lights&#8221; option for their alarm, the &#8220;Wake Up&#8221; page checks to see if the current user has a SmartThings token. If it doesn&#8217;t, then the user is redirected to SmartThings where they can authenticate their SmartThings account and gain a token for future control of their SmartThings devices.</li>
+<li>Once the user has configured all their alarm settings, he or she taps &#8220;Set&#8221;, which will trigger the &#8220;setCloudAlarm()&#8221; function on the Parse Cloud.</li>
+<li>During the &#8220;setCloudAlarm()&#8221; function, the Parse Cloud gets weather and TTS data from external APIs to send back to the user during the alarm.</li>
+<li>At the designated alarm time, Parse sends a push notification to AppDelegate running in the HK Rules app on the user&#8217;s iOS device, with all the configuration data concerning the alarm (alarm sound, weather/tts data, etc.).</li>
+<li>When the AppDelegate receives the push notification, it tells the HKWControlHandler to play the alarm media through the Harman speakers.</li>
+<li>When Parse sends the push notification, it also tells the SmartThings platform to turn on the user&#8217;s lights (using the User&#8217;s SmartThings authentication token from step 8).</li>
+</ol>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="modules.html" title="previous chapter">Overview of Classes</a></li>
+      <li>Next: <a href="shower.html" title="next chapter">Shower Scenario</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/wakeup.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Eric Tran, Tyler Freckmann.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      
+      |
+      <a href="_sources/wakeup.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

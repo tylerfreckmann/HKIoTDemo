@@ -24,7 +24,8 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="HKIoTDemo 1.0 documentation" href="index.html" />
-    <link rel="prev" title="Welcome to HKIoTDemo’s documentation!" href="index.html" />
+    <link rel="next" title="Wake Up Scenario" href="wakeup.html" />
+    <link rel="prev" title="Welcome to HKIoTDemo’s documentation!" href="context.html" />
    
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
@@ -47,9 +48,10 @@
 </ul>
 <p>The HK Rules iOS application allows the user to configure their preferences regarding each scenario. These preferences are stored in the Parse Cloud associated with a &#8220;User&#8221; object that represents the actual person using the HK Rules app. The user configures their &#8220;Wake Up&#8221; preferences in a &#8220;WakeConfig&#8221; object and their &#8220;Take a Shower&#8221; preferences in a &#8220;ShowerConfig&#8221; object.</p>
 <p>HK Rules controls the Harman speakers through the HKWControlHandler, from the HK Wireless SDK.</p>
-<p>Parse notifies the user of events occuring in the home through push notifications. These notifications are sent to &#8220;Installations&#8221; which associate apps, users, and devices. HK Rules handles these push notifications in the AppDelegate. The AppDelegate receives the push notifications and activates the speakers accordingly.</p>
+<p>Parse notifies the user of events occuring in the home through push notifications. These notifications are sent to the HK Rules app, which handles them in the AppDelegate. The AppDelegate then activates the speakers accordingly.</p>
 <p>Parse is notified of events occuring in the home through external sensors. The sensors in the demo are the &#8220;Shower Sensor&#8221; and the &#8220;Speech Sensor&#8221;. The &#8220;Shower Sensor&#8221; detects when a shower is running. It uses the ACRCloud API to capture audio from the environment and check if it is representative of a shower. The &#8220;Speech Sensor&#8221; is a voice recognition sensor. It uses the Houndify API to recognize speech and convert it to usable data.</p>
 <p>The Parse Cloud also allows the HK Rules system to integrate with other services, such as weather updates, text-to-speech, and other IoT platforms like <a class="reference external" href="http://www.smartthings.com/developers/">SmartThings</a>. The way that Parse interacts with these third parties is through &#8220;Cloud Code&#8221;.</p>
+<p><strong>Have trouble reading image?</strong> <a class="reference external" href="http://hkiotdemo.readthedocs.org/en/latest/_images/hkrulesmoduleclassdiagram.png">Click Here!</a></p>
 <div class="figure">
 <img alt="_images/hkrulesmoduleclassdiagram.png" src="_images/hkrulesmoduleclassdiagram.png" />
 </div>
@@ -64,7 +66,8 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="index.html" title="previous chapter">Welcome to HKIoTDemo&#8217;s documentation!</a></li>
+      <li>Previous: <a href="context.html" title="previous chapter">Welcome to HKIoTDemo&#8217;s documentation!</a></li>
+      <li>Next: <a href="wakeup.html" title="next chapter">Wake Up Scenario</a></li>
   </ul></li>
 </ul>
 </div>

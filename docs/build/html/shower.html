@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Shower Scenario &mdash; HKIoTDemo 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="HKIoTDemo 1.0 documentation" href="index.html" />
+    <link rel="next" title="Leave House Scenario" href="leave.html" />
+    <link rel="prev" title="Wake Up Scenario" href="wakeup.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="shower-scenario">
+<h1>Shower Scenario<a class="headerlink" href="#shower-scenario" title="Permalink to this headline">¶</a></h1>
+<p><strong>Have trouble reading image?</strong> <a href="#id1"><span class="problematic" id="id2">`Click Here! &lt;http://hkiotdemo.readthedocs.org/en/latest/_images/showersd.png`__</span></a></p>
+<div class="figure">
+<img alt="_images/showersd.png" src="_images/showersd.png" />
+</div>
+<ol class="arabic simple">
+<li>The user enters their username and password into the &#8220;Log In&#8221; page in the HK Rules iOS app, which logs the user in on the Parse side.</li>
+<li>The user is then directed to the &#8220;Choose Scenarios&#8221; page which initializes the HKWControlHandler object.</li>
+<li>The user then taps &#8220;Take a Shower&#8221; and is directed to the &#8220;Shower&#8221; page.</li>
+<li>The currentUser &#8220;User&#8221; object is retrieved, which returns a &#8220;ShowerConfig&#8221; object with it.</li>
+<li>The user configures their preferences for the Shower scenario: how long they want to shower and whether they want periodic alerts.</li>
+<li>The user then logs into the Shower Sensor so that the Shower Sensor can know what the user&#8217;s shower preferences are (by retrieving them from Parse), and also which user to send the Shower alert to.</li>
+<li>The shower sensor then retrieves the user&#8217;s shower preferences in a ShowerConfig object from Parse.</li>
+<li>The shower sensor begins listening to the environment, and sends a packet of sound data to the ACR Cloud for analysis. If the data resembles a shower sound, then the ACR Cloud sends back a positive response, which activates a timer on the shower sensor. The shower sensor keeps listening to the environment and sending data to ACR Cloud for analysis for the duration of the timer. If the shower sound is still playing before the timer runs out, the shower sensor sends an event to Parse which will trigger a shower alert.</li>
+<li>If Parse receives a notification from the shower sensor that the shower is running longer than the user had configured, it will get TTS data from the TTS API and send a push notification to the HK Rules App on the user&#8217;s iOS device.</li>
+<li>When the HK Rules AppDelegate receives the push notification from Parse, it will play an alert about the shower through the Harman speakers.</li>
+</ol>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="wakeup.html" title="previous chapter">Wake Up Scenario</a></li>
+      <li>Next: <a href="leave.html" title="next chapter">Leave House Scenario</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/shower.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Eric Tran, Tyler Freckmann.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      
+      |
+      <a href="_sources/shower.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
