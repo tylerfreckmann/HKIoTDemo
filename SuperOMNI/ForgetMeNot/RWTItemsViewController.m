@@ -32,9 +32,9 @@ int const kSecondsToPollFor = 5;
 int const kSuperOmniMajor = 1010;
 int const kSmartThingsMajor = 1100;
 
-// Seonman's beacons minor values
-int const kEstimoteOneMinor = 60040; // SuperOmni
-int const kEstimoteTwoMinor = 7710;  // SmartThings
+// Seonman's beacons major values
+int const kEstimoteOneMinor = 60040; // super
+int const kEstimoteTwoMinor = 7710;  // smart
 
 @interface RWTItemsViewController () <UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate>
 
@@ -179,13 +179,14 @@ int const kEstimoteTwoMinor = 7710;  // SmartThings
             if ([item isEqualToCLBeacon:beacon]) {
                 item.lastSeenBeacon = beacon;
                 
-                // Check if beacon is an SuperOmni
-                if ([beacon.minor intValue] == kEstimoteOneMinor && self.superOmniNdx != -1)
-                    [self calcAvgAndStream: beacon speakerNdx:self.superOmniNdx];
+                if ([beacon.minor intValue] == kEstimoteOneMinor && self.superOmniNdx != -1) {
+                    NSLog(@"IN SO");
+                    //[self calcAvgAndStream: beacon speakerNdx:self.superOmniNdx];
+                }
                 
-                // Check if beacon is an SmartThings
                 if ([beacon.minor intValue] == kEstimoteTwoMinor && self.smartThingsNdx != -1)
-                    [self calcAvgAndStream: beacon speakerNdx:self.smartThingsNdx];
+                    NSLog(@"IN ST");
+                   [self calcAvgAndStream: beacon speakerNdx:self.smartThingsNdx];
             }
         }
     }
@@ -292,7 +293,7 @@ int const kEstimoteTwoMinor = 7710;  // SmartThings
              avgRSSI: (float)rssi {
     
     // If the beacon is 'Near' or 'Immediate'(ly) close, play music on that speaker and adjust the volume if we move around.
-    //if (beacon.proximity == CLProximityNear || beacon.proximity == CLProximityImmediate) {
+    // if (beacon.proximity == CLProximityNear || beacon.proximity == CLProximityImmediate) {
     if ( beacon.rssi > -75) { // Our determine 'near' ranged HERE
         int volumeLvl = [self changeVolumeBasedOnRSSI:rssi];
         [self.HKWControl setVolumeDevice:[self.HKWControl getDeviceInfoByIndex:index].deviceId volume:volumeLvl];
@@ -302,7 +303,7 @@ int const kEstimoteTwoMinor = 7710;  // SmartThings
             [self playStreaming];
     }
     // If beacon is 'Far' or 'Unknown' (out of reach), turn down the volume of that speaker to 0
-    else
+    else// if ( beacon.proximity == CLProximityFar || beacon.proximity == CLProximityUnknown)
         [self.HKWControl setVolumeDevice:[self.HKWControl getDeviceInfoByIndex:index].deviceId volume:0];
     
 }
@@ -350,16 +351,12 @@ int const kEstimoteTwoMinor = 7710;  // SmartThings
 - (int) changeVolumeBasedOnRSSI: (float) rssi {
     
     // Realistically, can't go father than -90 approx.
-    if (rssi < -80)
+    if (rssi < -75)
+        return 10;
+    else if (rssi < -65)
         return 15;
-    else if (rssi < -70)
-        return 20;
-    else if (rssi < -60)
-        return 25;
     else if (rssi < -50)
-        return 30;
-    else if (rssi < -40)
-        return 35;
+        return 20;
     
     return 0; // Unknown rssi
 }
