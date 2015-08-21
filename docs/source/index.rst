@@ -14,12 +14,14 @@ The entities involved in this demo are:
 *Speech Sensor*
 	iOS application representing a voice recognition sensor. 
 *SmartThings*
-	Third party IoT devices such as contact sensors, temperature sensors, etc. (`SmartThings <http://www.smartthings.com/developers/`__ )
+	Third party IoT devices such as contact sensors, temperature sensors, etc. (`SmartThings <http://www.smartthings.com/developers/>`__ )
+
+Have trouble reading image? `Click Here! <http://hkiotdemo.readthedocs.org/en/latest/_images/hkrulesmoduleclassdiagram.png>`__ 
 
 .. figure::  images/iotdemocontextdiagram.png 
 
 Contents:
-
+ 
 Overview of Classes 
 ~~~~~~~~~~~~~~~~~~~~
 
