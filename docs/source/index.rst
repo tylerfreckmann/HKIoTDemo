@@ -30,34 +30,3 @@ Intro
 
    index
  
-Overview of Classes 
-~~~~~~~~~~~~~~~~~~~~
-
-.. toctree::
-   :maxdepth: 2
-
-   modules
-
-Wake Up Scenario
-~~~~~~~~~~~~~~~~~
-
-.. toctree::
-   :maxdepth: 2
-
-   wakeup
-
-Shower Scenario
-~~~~~~~~~~~~~~~~~
-
-.. toctree::
-   :maxdepth: 2
-
-   shower
-
-Leave Home Scenario
-~~~~~~~~~~~~~~~~~
-
-.. toctree::
-   :maxdepth: 2
-
-   leave
