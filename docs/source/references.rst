@@ -6,8 +6,7 @@ Useful resources used in this demo include:
 *Parse Platform*
 	`https://parse.com/ <https://parse.com/>`__ 
 *SmartThings*
-	`http://docs.smartthings.com/en/latest/smartapp-web-services-developers-guide/index.html
-    <http://docs.smartthings.com/en/latest/smartapp-web-services-developers-guide/index.html>`__ 
+	`http://docs.smartthings.com/en/latest/smartapp-web-services-developers-guide/index.html <http://docs.smartthings.com/en/latest/smartapp-web-services-developers-guide/index.html>`__ 
 *Houndify*
 	`https://houndify.com/ <https://houndify.com/>`__ 
 *ACRCloud*
