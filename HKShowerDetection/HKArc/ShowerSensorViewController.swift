@@ -54,6 +54,8 @@ class ShowerSensorViewController: UIViewController {
     /* Callback for when stop button is pressed */
     @IBAction func stopPressed(sender: UIButton) {
         client.stopRecordRec()
+        self.durationTimer.invalidate()
+        self.showerTimer.invalidate()
     }
     
     /* Initializes the ACR recorder and starts recording */
@@ -191,7 +193,7 @@ class ShowerSensorViewController: UIViewController {
         timeToAlert = secondsTillAlert
         
         if periodicFlag {
-            showerTimer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: "triggerEventInCloud:", userInfo:periodicFlag, repeats: true)
+            showerTimer = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "triggerEventInCloud:", userInfo:periodicFlag, repeats: true)
         } else {
             showerTimer = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(secondsTillAlert), target: self, selector: "triggerEventInCloud:", userInfo: periodicFlag, repeats: false)
         }
@@ -208,14 +210,29 @@ class ShowerSensorViewController: UIViewController {
         
         if timer.userInfo as! Bool {
             // Periodic alert flag on
+            //var currentTimeInMinutes = (60 * alertCount) / 60
+            //var currentSecs = (60 * alertCount) % 60
             alertCount++
-            var currentTimeInMinutes = (60 * alertCount) / 60
-            timeString = String(currentTimeInMinutes) + " minutes.";
+            var elapseTime = CACurrentMediaTime() - startTime
+            var totalElapseSeconds = Int(elapseTime)
+            var minutes = totalElapseSeconds / 60
+            var seconds = totalElapseSeconds % 60
             
-            if (timeToAlert / 60) == alertCount {
+            if (minutes == 0) {
+                timeString = String(seconds) + " seconds."
+            }
+            else if (seconds == 0) {
+                timeString = String(minutes) + " minutes."
+            }
+            else {
+                timeString = String(minutes) + " minutes and " + String(seconds) + " seconds."
+            }
+            
+            if (timeToAlert / 30) == alertCount {
                 timeString = timeString + " You have showered for your preferred maximum time.";
                 showerTimer.invalidate()
             }
+
         }
         else {
             var minutes = timeToAlert / 60
