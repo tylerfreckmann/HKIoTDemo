@@ -10,12 +10,16 @@ Terms used:
 <br>SuperOmni - Omni 10 with embedded iBeacon (Major: 1010, Minor: 1)
 <br>SmartThings - Omni 20 with RFDuino acting as iBeacon beside it (Major: 1100, Minor: 1) 
 
-<b> For Seonman:
-<br> UUID: B9407F30-F5F8-466E-AFF9-25556B57FE6D 
+<b> For Seonman: 
+
+Beacon One: 
+<br> UUID: B9407F30-F5F8-466E-AFF9-25556B57FE6D | Major: 228622 | Minor: 7710
+
+Beacon Two:
+<br> UUID: 5D3758EC-4C01-4C38-A1BF-69A1536E3513 | Major: 1001 | Minor: 1
+
 <br> I recommend using two speakers that are the same (Omni 10/Omni 10) or (Omni 20/Omni 20). 
-<br> The beacons are labeled with 'Super' or 'Smart' with their major and minor. 
-<br> The speaker that should be near the 'Super' beacon should be named "SuperOmni" through the HK Page app. 
-<br> The speaker that should be near the 'Smart' beacon should be named "SmartThings" through the HK Page app. </b>
+<br> You will have to mess around with where to put the beacons + speakers. </b> 
 
 Almost all of iBeacon functionality with HK speakers are written in RWTItemsViewController.m.
 Currently the functionality of this application are:
