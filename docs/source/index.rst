@@ -10,11 +10,11 @@ The entities involved in this demo are:
 *Parse Cloud*
 	Backend architecture for IoT functionality, and interfaces with third parties.
 *Shower Sensor* 
-	iOS application representing a sensor in the home (specifically detecting the lengths of showers)
+	iOS application representing a sensor in the home (specifically detecting the lengths of showers).
 *Speech Sensor*
-	iOS application representing a voice recognition sensor 
+	iOS application representing a voice recognition sensor. 
 *SmartThings*
-	Third party IoT devices such as contact sensors, temperature sensors, etc 
+	Third party IoT devices such as contact sensors, temperature sensors, etc. (`SmartThings <http://www.smartthings.com/developers/`__ )
 
 .. figure::  images/iotdemocontextdiagram.png 
 
