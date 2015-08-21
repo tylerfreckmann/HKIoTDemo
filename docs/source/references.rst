@@ -1,7 +1,7 @@
 References
 =====================================
 
-Useful resources used in this demo include: 
+Resources used in this demo include: 
 
 *Parse Platform*
 	`https://parse.com/ <https://parse.com/>`__ 
