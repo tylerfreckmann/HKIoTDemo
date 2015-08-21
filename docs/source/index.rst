@@ -16,11 +16,19 @@ The entities involved in this demo are:
 *SmartThings*
 	Third party IoT devices such as contact sensors, temperature sensors, etc. (`SmartThings <http://www.smartthings.com/developers/>`__ )
 
-Have trouble reading image? `Click Here! <http://hkiotdemo.readthedocs.org/en/latest/_images/hkrulesmoduleclassdiagram.png>`__ 
+Have trouble reading image? `Click Here! <http://hkiotdemo.readthedocs.org/en/latest/_images/iotdemocontextdiagram.png>`__ 
 
 .. figure::  images/iotdemocontextdiagram.png 
 
 Contents:
+
+Intro
+~~~~~~
+
+.. toctree::
+   :maxdepth: 2
+
+   index
  
 Overview of Classes 
 ~~~~~~~~~~~~~~~~~~~~

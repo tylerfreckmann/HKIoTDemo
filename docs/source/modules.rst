@@ -17,6 +17,6 @@ Parse is notified of events occuring in the home through external sensors. The s
 
 The Parse Cloud also allows the HK Rules system to integrate with other services, such as weather updates, text-to-speech, and other IoT platforms like `SmartThings <http://www.smartthings.com/developers/>`__. The way that Parse interacts with these third parties is through "Cloud Code".
 
-Have trouble reading image? `Click Here! <http://hkiotdemo.readthedocs.org/en/latest/_images/hkrulesmoduleclassdiagram.png>`__ 
+**Have trouble reading image?** `Click Here! <http://hkiotdemo.readthedocs.org/en/latest/_images/hkrulesmoduleclassdiagram.png>`__ 
 
 .. figure::  images/hkrulesmoduleclassdiagram.png

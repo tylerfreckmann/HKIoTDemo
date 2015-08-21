@@ -1,6 +1,8 @@
 Shower Scenario
 ================
 
+**Have trouble reading image?** `Click Here! <http://hkiotdemo.readthedocs.org/en/latest/_images/showersd.png`__ 
+
 .. figure::  images/showersd.png
 
 1. The user enters their username and password into the "Log In" page in the HK Rules iOS app, which logs the user in on the Parse side.
