@@ -1,7 +1,7 @@
 Shower Scenario
 ================
 
-**Have trouble reading image?** `Click Here! <http://hkiotdemo.readthedocs.org/en/latest/_images/showersd.png`__ 
+**Have trouble reading image?** `Click Here! <http://hkiotdemo.readthedocs.org/en/latest/_images/showersd.png>`__ 
 
 .. figure::  images/showersd.png
 

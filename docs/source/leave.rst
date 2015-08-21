@@ -1,7 +1,7 @@
 Leave House Scenario
 ================
 
-**Have trouble reading image?** `Click Here! <http://hkiotdemo.readthedocs.org/en/latest/_images/leavesd.png`__ 
+**Have trouble reading image?** `Click Here! <http://hkiotdemo.readthedocs.org/en/latest/_images/leavesd.png>`__ 
 
 .. figure::  images/leavesd.png
 

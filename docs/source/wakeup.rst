@@ -1,7 +1,7 @@
 Wake Up Scenario
 ================
 
-**Have trouble reading image?** `Click Here! <http://hkiotdemo.readthedocs.org/en/latest/_images/wakeupsd.png`__ 
+**Have trouble reading image?** `Click Here! <http://hkiotdemo.readthedocs.org/en/latest/_images/wakeupsd.png>`__ 
 
 .. figure::  images/wakeupsd.png
 
