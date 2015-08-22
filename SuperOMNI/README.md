@@ -12,11 +12,11 @@ Terms used:
 
 <b> For Seonman: 
 
-Beacon One: 
-<br> UUID: B9407F30-F5F8-466E-AFF9-25556B57FE6D | Major: 28622 | Minor: 7710
+Beacon "Super":
+<br> UUID: B9407F30-F5F8-466E-AFF9-25556B57FE6D | Major: 28622 | Minor: 60040
 
-Beacon Two:
-<br> UUID: 5D3758EC-4C01-4C38-A1BF-69A1536E3513 | Major: 1001 | Minor: 1
+Beacon "Smart":
+<br> UUID: B9407F30-F5F8-466E-AFF9-25556B57FE6D | Major: 28622 | Minor: 7710
 
 <br> I recommend using two speakers that are the same (Omni 10/Omni 10) or (Omni 20/Omni 20). 
 <br> The "Super" beacon should be placed in a pair with the speaker that is named "SuperOmni".
