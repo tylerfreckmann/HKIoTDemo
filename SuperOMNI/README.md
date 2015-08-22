@@ -14,13 +14,13 @@ Terms used:
 
 Beacon "Super":
 <br> UUID: B9407F30-F5F8-466E-AFF9-25556B57FE6D | Major: 28622 | Minor: 60040
+<br> The "Super" beacon should be placed in a pair with the speaker that is named "SuperOmni".
 
 Beacon "Smart":
 <br> UUID: B9407F30-F5F8-466E-AFF9-25556B57FE6D | Major: 28622 | Minor: 7710
+<br> The "Smart" beacon should be placed in a pair with the speaker that is named "SmartThings".
 
 <br> I recommend using two speakers that are the same (Omni 10/Omni 10) or (Omni 20/Omni 20). 
-<br> The "Super" beacon should be placed in a pair with the speaker that is named "SuperOmni".
-<br> The "Smart" beacon should be placed in a pair with the speaker that is named "SmartThings".
 <br> You will have to mess around with where to put the beacons + speakers. </b> 
 
 Almost all of iBeacon functionality with HK speakers are written in RWTItemsViewController.m.
