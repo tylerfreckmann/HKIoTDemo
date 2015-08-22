@@ -181,7 +181,7 @@ int const kEstimoteTwoMinor = 7710;  // smart
                 
                 if ([beacon.minor intValue] == kEstimoteOneMinor && self.superOmniNdx != -1) {
                     NSLog(@"IN SO");
-                    //[self calcAvgAndStream: beacon speakerNdx:self.superOmniNdx];
+                    [self calcAvgAndStream: beacon speakerNdx:self.superOmniNdx];
                 }
                 
                 if ([beacon.minor intValue] == kEstimoteTwoMinor && self.smartThingsNdx != -1)
