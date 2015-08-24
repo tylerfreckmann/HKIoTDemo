@@ -7,7 +7,7 @@ WORK IN PROGRESS
 <b> For Seonman: 
 
 Here is an image of the setup so it is easier to see: 
-![Image](http://i.imgur.com/AXRgWY3.png)
+![Image](http://i.imgur.com/PVGxutE.png)
 
 Beacon "Super":
 <br>UUID: B9407F30-F5F8-466E-AFF9-25556B57FE6D | Major: 28622 | Minor: 60040
