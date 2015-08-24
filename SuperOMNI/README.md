@@ -7,8 +7,7 @@ WORK IN PROGRESS
 <b> For Seonman: 
 
 Here is an image of the setup so it is easier to see: 
-![alt tag](https://drive.google.com/open?id=0B5nP4S4xHgiUb25WcEIybWF2NXM)
-
+[Imgur](http://i.imgur.com/AXRgWY3.png)
 Beacon "Super":
 <br>UUID: B9407F30-F5F8-466E-AFF9-25556B57FE6D | Major: 28622 | Minor: 60040
 <br> The "Super" beacon should be placed in a pair with the speaker that is named "SuperOmni".
