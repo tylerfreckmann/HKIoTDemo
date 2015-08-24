@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/Eric/Desktop/SuperOMNI/LinearRegression/RegressionResult.m \
-  /Users/Eric/Desktop/SuperOMNI/LinearRegression/RegressionResult.h
+  /Users/Eric/Desktop/HKIoTDemo/SuperOMNI/LinearRegression/RegressionResult.m \
+  /Users/Eric/Desktop/HKIoTDemo/SuperOMNI/LinearRegression/RegressionResult.h

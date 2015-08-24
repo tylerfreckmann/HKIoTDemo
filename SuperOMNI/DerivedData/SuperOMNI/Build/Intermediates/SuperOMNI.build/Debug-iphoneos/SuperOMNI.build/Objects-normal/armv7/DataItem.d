@@ -1,2 +1,3 @@
-dependencies: /Users/Eric/Desktop/SuperOMNI/LinearRegression/DataItem.m \
-  /Users/Eric/Desktop/SuperOMNI/LinearRegression/DataItem.h
+dependencies: \
+  /Users/Eric/Desktop/HKIoTDemo/SuperOMNI/LinearRegression/DataItem.m \
+  /Users/Eric/Desktop/HKIoTDemo/SuperOMNI/LinearRegression/DataItem.h

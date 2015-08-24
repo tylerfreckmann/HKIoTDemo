@@ -1,2 +1,3 @@
-dependencies: /Users/Eric/Desktop/SuperOMNI/ForgetMeNot/RWTItem.m \
-  /Users/Eric/Desktop/SuperOMNI/ForgetMeNot/RWTItem.h
+dependencies: \
+  /Users/Eric/Desktop/HKIoTDemo/SuperOMNI/ForgetMeNot/RWTItem.m \
+  /Users/Eric/Desktop/HKIoTDemo/SuperOMNI/ForgetMeNot/RWTItem.h

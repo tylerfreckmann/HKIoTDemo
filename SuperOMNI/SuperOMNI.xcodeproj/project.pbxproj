@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		070963F91B44AF5D000D96CA /* NowPlayingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 070963F81B44AF5D000D96CA /* NowPlayingController.m */; };
 		072229A71B41F04A000EA416 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072229A61B41F04A000EA416 /* CoreLocation.framework */; };
 		074550B61B4CA37400A7E705 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83EC54C61898DD3600EA1765 /* Images.xcassets */; };
 		074550B91B4CA43B00A7E705 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83EC54C01898DD3600EA1765 /* Main.storyboard */; };
@@ -46,8 +45,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		070963F81B44AF5D000D96CA /* NowPlayingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowPlayingController.m; sourceTree = "<group>"; };
-		070963FA1B44AF6F000D96CA /* NowPlayingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NowPlayingController.h; sourceTree = "<group>"; };
 		072229A61B41F04A000EA416 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		07E551E11B6056CB00419877 /* Eiffel 65 - I'm blue with lyrics.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Eiffel 65 - I'm blue with lyrics.mp3"; sourceTree = "<group>"; };
 		07EDBF041B4B01560072219E /* ForgetMeNot.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ForgetMeNot.xcodeproj; sourceTree = "<group>"; };
@@ -130,8 +127,6 @@
 				83EC54E71898E05E00EA1765 /* RWTAddItemViewController.m */,
 				83EC54C31898DD3600EA1765 /* RWTItemsViewController.h */,
 				83EC54C41898DD3600EA1765 /* RWTItemsViewController.m */,
-				070963FA1B44AF6F000D96CA /* NowPlayingController.h */,
-				070963F81B44AF5D000D96CA /* NowPlayingController.m */,
 			);
 			name = VCs;
 			sourceTree = "<group>";
@@ -403,7 +398,6 @@
 				07F0F9D61B61B0F000804AB2 /* README.markdown in Sources */,
 				07E52B721B54721200C06F0C /* ItemCell.m in Sources */,
 				07F0F9D41B61B0F000804AB2 /* DataItem.m in Sources */,
-				070963F91B44AF5D000D96CA /* NowPlayingController.m in Sources */,
 				07F0F9D51B61B0F000804AB2 /* LinearRegression.m in Sources */,
 				07F0F9D71B61B0F000804AB2 /* RegressionResult.m in Sources */,
 				83EC54C51898DD3600EA1765 /* RWTItemsViewController.m in Sources */,

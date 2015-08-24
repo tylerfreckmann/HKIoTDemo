@@ -56,15 +56,18 @@
                     <navigationItem key="navigationItem" title="iBeacons" id="dlF-WY-14h">
                         <barButtonItem key="leftBarButtonItem" title="Speakers" id="s1V-IF-U2q">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Bfl-dE-dAg">
-                                <rect key="frame" x="16" y="7" width="86" height="30"/>
+                                <rect key="frame" x="16" y="7" width="33" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Now Playing">
+                                <state key="normal" title="Stop">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cMW-rB-hBu" kind="push" identifier="NowPlaying" id="1pl-CQ-w1T"/>
+                                    <action selector="stopPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QRS-xH-wlu"/>
                                 </connections>
                             </button>
+                            <connections>
+                                <action selector="stopPressed:" destination="vXZ-lx-hvc" id="MZ5-Nc-edK"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="5PF-P4-oY3">
                             <connections>
@@ -74,6 +77,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="itemsTableView" destination="aMZ-Mx-4IH" id="Awv-Q6-RRs"/>
+                        <outlet property="stopBtn" destination="Bfl-dE-dAg" id="d3H-Tr-8l8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

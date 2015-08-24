@@ -38,12 +38,13 @@ int const kEstimoteTwoMinor = 7710;  // smart
 
 @interface RWTItemsViewController () <UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate>
 
+@property (weak, nonatomic) IBOutlet UIButton *stopBtn;
 @property (weak, nonatomic) IBOutlet UITableView *itemsTableView;
 
 @property (strong, nonatomic) HKWControlHandler *HKWControl;
 @property (strong, nonatomic) NSMutableArray *items;
 @property (strong, nonatomic) CLLocationManager *locationManager;
-@property (strong, nonatomic) NSArray *music;
+
 @property (strong, nonatomic) NSMutableArray *smartThingsDataPoints;
 @property (strong, nonatomic) NSMutableArray *superOmniDataPoints;
 @property (strong, nonatomic) LinearRegression * superLinearFit;
@@ -81,6 +82,11 @@ int const kEstimoteTwoMinor = 7710;  // smart
     self.smartLinearFit = [LinearRegression new];
     self.superLinearFit = [LinearRegression new];
     
+}
+- (IBAction)stopPressed:(id)sender {
+    if ([self.HKWControl isPlaying]) {
+        [self.HKWControl stop];
+    }
 }
 
 /* Goes through list of speakers and assigns index number to the superOmni and the smartThings speaker
@@ -179,14 +185,18 @@ int const kEstimoteTwoMinor = 7710;  // smart
             if ([item isEqualToCLBeacon:beacon]) {
                 item.lastSeenBeacon = beacon;
                 
+                NSLog(@"Checking which beacon...");
+                
                 if ([beacon.minor intValue] == kEstimoteOneMinor && self.superOmniNdx != -1) {
-                    NSLog(@"IN SO");
+                    NSLog(@"Playing in SuperOmni");
                     [self calcAvgAndStream: beacon speakerNdx:self.superOmniNdx];
                 }
                 
-                if ([beacon.minor intValue] == kEstimoteTwoMinor && self.smartThingsNdx != -1)
-                    NSLog(@"IN ST");
+                if ([beacon.minor intValue] == kEstimoteTwoMinor && self.smartThingsNdx != -1) {
+                    NSLog(@"Playing in SmartThings");
                    [self calcAvgAndStream: beacon speakerNdx:self.smartThingsNdx];
+                }
+                
             }
         }
     }
@@ -199,7 +209,7 @@ int const kEstimoteTwoMinor = 7710;  // smart
                speakerNdx: (int) index {
     int setCount;
     
-    // Check if beacon is SuperOmni
+    // Get the number of seconds we've gather data for
     if (index == self.superOmniNdx)
         setCount = self.superOmniDataPoints.count;
     else
@@ -207,10 +217,11 @@ int const kEstimoteTwoMinor = 7710;  // smart
     
     // Has full data set to calculate regression line
     // ... or needs more data point (from 0 to kSecondsToStart)
-    if (setCount == kSecondsToPollFor)
+    if (setCount == kSecondsToPollFor) {
         [self calculateRegressionLine:index currentBeacon:beacon];
-    else
+    } else {
         [self initSpeakerPlay:beacon speakerNdx:index currentSec:setCount];
+    }
 }
 
 /* Helper method for handling when a speaker has gathered enough data points.
@@ -256,14 +267,20 @@ int const kEstimoteTwoMinor = 7710;  // smart
         [self.superLinearFit addDataObject: temp];
         
         // Check if in range of 0 - kSecondsToStart
-        [self calcInitAvg:beacon currentSec:setCount speakerNdx:index dataPointArray:self.superOmniDataPoints];
+        [self calcInitAvg:beacon
+               currentSec:setCount
+               speakerNdx:index
+           dataPointArray:self.superOmniDataPoints];
         
     } else {
         [self.smartThingsDataPoints addObject: temp];
         [self.smartLinearFit addDataObject:temp];
         
         // Check if in range of 0 - kSecondsToStart
-        [self calcInitAvg:beacon currentSec:setCount speakerNdx:index dataPointArray:self.smartThingsDataPoints];
+        [self calcInitAvg:beacon
+               currentSec:setCount
+               speakerNdx:index
+           dataPointArray:self.smartThingsDataPoints];
     }
 }
 
@@ -293,9 +310,10 @@ int const kEstimoteTwoMinor = 7710;  // smart
              avgRSSI: (float)rssi {
     
     // If the beacon is 'Near' or 'Immediate'(ly) close, play music on that speaker and adjust the volume if we move around.
-    // if (beacon.proximity == CLProximityNear || beacon.proximity == CLProximityImmediate) {
-    if ( beacon.rssi > -75) { // Our determine 'near' ranged HERE
-        int volumeLvl = [self changeVolumeBasedOnRSSI:rssi];
+    if (beacon.proximity == CLProximityNear || beacon.proximity == CLProximityImmediate) {
+        int volumeLvl = [self changeVolumeBasedOnRange: beacon];
+        NSLog(@"Playing in beacon with major: %d | minor: %d at volume: %d", [beacon.major intValue], [beacon.minor intValue], volumeLvl);
+        //int volumeLvl = [self changeVolumeBasedOnRSSI:rssi];
         [self.HKWControl setVolumeDevice:[self.HKWControl getDeviceInfoByIndex:index].deviceId volume:volumeLvl];
         
         // If song isn't playing start playing it
@@ -303,7 +321,7 @@ int const kEstimoteTwoMinor = 7710;  // smart
             [self playStreaming];
     }
     // If beacon is 'Far' or 'Unknown' (out of reach), turn down the volume of that speaker to 0
-    else// if ( beacon.proximity == CLProximityFar || beacon.proximity == CLProximityUnknown)
+    else
         [self.HKWControl setVolumeDevice:[self.HKWControl getDeviceInfoByIndex:index].deviceId volume:0];
     
 }
@@ -331,12 +349,12 @@ int const kEstimoteTwoMinor = 7710;  // smart
     NSString *bundleRoot = [[NSBundle mainBundle] bundlePath];
     NSArray *dirContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:bundleRoot error:nil];
     NSPredicate *filter = [NSPredicate predicateWithFormat: @"self ENDSWITH '.mp3'"];
-    _music = [dirContents filteredArrayUsingPredicate:filter];
+    NSArray *music = [dirContents filteredArrayUsingPredicate:filter];
     
-    NSURL *assetURL = [NSURL fileURLWithPath: [bundleRoot stringByAppendingPathComponent: _music[0]]];
+    NSURL *assetURL = [NSURL fileURLWithPath: [bundleRoot stringByAppendingPathComponent: music[0]]];
     NSLog(@"NSURL: %@", assetURL);
     
-    [self.HKWControl playCAF:assetURL songName:_music[0] resumeFlag:true];
+    [self.HKWControl playCAF:assetURL songName:music[0] resumeFlag:true];
 }
 
 /* Changes volume of superomni, based on calculated rssi value from best fit line.
@@ -361,6 +379,26 @@ int const kEstimoteTwoMinor = 7710;  // smart
     return 0; // Unknown rssi
 }
 
+/* Used to determine the volume of the associated beacon to speaker. */
+- (int) changeVolumeBasedOnRange: (CLBeacon*) beacon {
+    int volume = 0;
+    switch (beacon.proximity) {
+        case CLProximityFar: // Should never play at 20 because speaker doesn't play at far range
+            volume = 20;
+            break;
+        case CLProximityNear:
+            volume = 15;
+            break;
+        case CLProximityImmediate:
+            volume = 10;
+            break;
+        case CLProximityUnknown:
+            break;
+        default:
+            break;
+    }
+    return volume;
+}
 
 #pragma mark - UITableViewDataSource
 
