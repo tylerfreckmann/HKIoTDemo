@@ -4,13 +4,11 @@ Integrate iBeacons with HKWireless SDK in order to ultimately create "Follow Me 
 WORK IN PROGRESS
 ---------------
 
-(Written in Objective C in this moment in time)
-
-Terms used: 
-<br>SuperOmni - Omni 10 with embedded iBeacon (Major: 1010, Minor: 1)
-<br>SmartThings - Omni 20 with RFDuino acting as iBeacon beside it (Major: 1100, Minor: 1) 
-
 <b> For Seonman: 
+
+Here is an image of the setup so it is easier to see: 
+![alt tag](https://drive.google.com/open?id=0B5nP4S4xHgiUb25WcEIybWF2NXM)
+
 Beacon "Super":
 <br>UUID: B9407F30-F5F8-466E-AFF9-25556B57FE6D | Major: 28622 | Minor: 60040
 <br> The "Super" beacon should be placed in a pair with the speaker that is named "SuperOmni".
@@ -21,6 +19,10 @@ Beacon "Smart":
 
 <br> I recommend using two speakers that are the same (Omni 10/Omni 10) or (Omni 20/Omni 20). 
 <br> You will have to mess around with where to put the beacons + speakers. </b> 
+
+Terms used: 
+<br>SuperOmni - Omni 10 with embedded iBeacon (Major: 1010, Minor: 1)
+<br>SmartThings - Omni 20 with RFDuino acting as iBeacon beside it (Major: 1100, Minor: 1) 
 
 Almost all of iBeacon functionality with HK speakers are written in RWTItemsViewController.m.
 
