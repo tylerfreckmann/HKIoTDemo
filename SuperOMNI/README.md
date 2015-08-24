@@ -11,11 +11,11 @@ Terms used:
 <br>SmartThings - Omni 20 with RFDuino acting as iBeacon beside it (Major: 1100, Minor: 1) 
 
 <b> For Seonman: 
-<b>Beacon "Super":
+Beacon "Super":
 <br>UUID: B9407F30-F5F8-466E-AFF9-25556B57FE6D | Major: 28622 | Minor: 60040
 <br> The "Super" beacon should be placed in a pair with the speaker that is named "SuperOmni".
 
-<b>Beacon "Smart":
+Beacon "Smart":
 <br>UUID: B9407F30-F5F8-466E-AFF9-25556B57FE6D | Major: 28622 | Minor: 7710
 <br> The "Smart" beacon should be placed in a pair with the speaker that is named "SmartThings".
 
