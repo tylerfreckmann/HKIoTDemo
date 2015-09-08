@@ -8,7 +8,7 @@ We also did not have a voice recoginization sensor of our own, so we had to emul
 The 3rd party things we used for this scenario are:
 
 *Houndify API*
-	for speech recognization. We needed it to differentiate phrases from the user.  
+	for speech recognization.
 *Weather API*
 	for weather forecase notification. 
 *Text-To-Speech API*
