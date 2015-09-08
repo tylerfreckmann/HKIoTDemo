@@ -1,11 +1,5 @@
-AboutUs
+References 
 =======
-This Internet of Things Demonstration was designed and implemented by Tyler Freckmann and Eric Tran. 
-
-If you would like to see the source codefor this project, go `https://github.com/tylerfreckmann/HKIoTDemo <here>`__ 
-
-References
-~~~~~~~~~~
 
 Here are the links to the resources we used for this demo:
 
@@ -21,5 +15,11 @@ Here are the links to the resources we used for this demo:
 	`http://www.voicerss.org/ <http://www.voicerss.org/>`__ 
 *Dark Sky Forecast API*
 	`https://developer.forecast.io/docs/v2 <https://developer.forecast.io/docs/v2>`__ 
+*ReadTheDocs*
+	'https://readthedocs.org/ <https://readthedocs.org/>'__'
 
+About Us
+~~~~~~~~
+This demonstration was designed and implemented by Tyler Freckmann and Eric Tran. 
 
+If you would like to see the source code for this project, go `here <https://github.com/tylerfreckmann/HKIoTDemo>`__ !
