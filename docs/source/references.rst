@@ -1,8 +1,15 @@
 References 
-=======
+==========
 
-Here are the links to the resources we used for this demo:
+We would like to say thanks and give credit to all of the different APIs and libraries we used for this demo. 
+After finishing this demo, we felt accomplished to have been able to see how everything worked hand-in-hand with each other. 
 
+
+Resources
+~~~~~~~~~
+
+*Harman/Kardon SDK*
+	`http://developer.harman.com/ <http://developer.harman.com/>`__ 
 *Parse Platform*
 	`https://parse.com/ <https://parse.com/>`__ 
 *SmartThings*
@@ -16,10 +23,10 @@ Here are the links to the resources we used for this demo:
 *Dark Sky Forecast API*
 	`https://developer.forecast.io/docs/v2 <https://developer.forecast.io/docs/v2>`__ 
 *ReadTheDocs*
-	'https://readthedocs.org/ <https://readthedocs.org/>'__'
+	'https://readthedocs.org/ <https://readthedocs.org/>'__
 
 About Us
 ~~~~~~~~
 This demonstration was designed and implemented by Tyler Freckmann and Eric Tran. 
 
-If you would like to see the source code for this project, go `here <https://github.com/tylerfreckmann/HKIoTDemo>`__ !
+If you would like to see the source code for this project, go `here <https://github.com/tylerfreckmann/HKIoTDemo>`__!
