@@ -49,7 +49,7 @@ Here are the steps that lead to choosing all the different settings for the wake
 
 9. Once the user has configured all their alarm settings, he or she taps "Set", which will trigger the "setCloudAlarm()" function on the Parse Cloud.
 
-..note:: 
+.. note:: 
 
 	If you need a SmartThings token, you will have to go through multiple authentication pages, but rest assured, you will only have to do this once as well! We have been trying to find an easier user friendly way of handling these authentication process, but bear with us in the meantime.
 
