@@ -9,7 +9,7 @@ Architecture Overview
 ~~~~~~~~~~~~~~~~~~~~~
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 5
 
    context
  
@@ -17,7 +17,7 @@ Overview of Classes
 ~~~~~~~~~~~~~~~~~~~
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 5
 
    modules
 
@@ -25,7 +25,7 @@ Wake Up Scenario
 ~~~~~~~~~~~~~~~~
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 5
 
    wakeup
 
@@ -33,7 +33,7 @@ Shower Scenario
 ~~~~~~~~~~~~~~~
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 5
 
    shower
 
@@ -41,7 +41,7 @@ Leave Home Scenario
 ~~~~~~~~~~~~~~~~~~~
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 5
 
    leave
 
@@ -49,6 +49,6 @@ AboutUs/References
 ~~~~~~~~~~~~~~~~~~
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 5
 
    references
