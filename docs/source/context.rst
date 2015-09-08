@@ -1,12 +1,10 @@
 Architecture Overview
 =====================
 
-Welcome to our demo on how the Harman Wireless HD Audio System can be integrated into the Internet of Things. The `Wireless HD Audio SDK <http://developer.harman.com>`__ allows one to develop applications that connect HD Wireless speakers to other devices in the home.
-
 The entities involved in this demo are:
 
 *HK Rules Application*
-	iOS application that functions as a central hub for interfacing with the Harman speakers. 
+	iOS application that functions as a central hub for interactingg with the Harman speakers. 
 *Parse Cloud*
 	Backend architecture for IoT functionality, and interfaces with third parties.
 *Shower Sensor* 
@@ -16,6 +14,13 @@ The entities involved in this demo are:
 *SmartThings*
 	Third party IoT devices such as contact sensors, temperature sensors, etc. (`SmartThings <http://www.smartthings.com/developers/>`__ )
 
-Have trouble reading image? `Click Here! <http://hkiotdemo.readthedocs.org/en/latest/_images/iotdemocontextdiagram.png>`__ 
+Each of the things we used in this demo served a purpose. We tried to incorporate as many IoT platforms and devices as we can, but they're are just so much!
+
+Context Diagram
+===============
+
+Below is a diagram displaying how each of how entities are connected to each other. 
 
 .. figure::  images/iotdemocontextdiagram.png 
+
+**Is the image above too hard to read for you?** `Click Here! <http://hkiotdemo.readthedocs.org/en/latest/_images/iotdemocontextdiagram.png>`__ 

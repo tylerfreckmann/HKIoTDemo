@@ -1,7 +1,7 @@
 References
 =====================================
 
-Resources used in this demo include: 
+Here are the links to the resources we used for this demo:
 
 *Parse Platform*
 	`https://parse.com/ <https://parse.com/>`__ 
@@ -13,7 +13,7 @@ Resources used in this demo include:
 	`https://acrcloud.com/ <https://acrcloud.com/>`__ 
 *VoiceRSS*
 	`http://www.voicerss.org/ <http://www.voicerss.org/>`__ 
-*Dark Sky Forecase API*
+*Dark Sky Forecast API*
 	`https://developer.forecast.io/docs/v2 <https://developer.forecast.io/docs/v2>`__ 
 
 
