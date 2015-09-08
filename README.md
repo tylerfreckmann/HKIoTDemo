@@ -1,9 +1,7 @@
 # HKIoTDemo
 
-Documentation
--------------
-http://hkiotdemo.readthedocs.org/en/latest/index.html
-
+Summary
+-------
 This git repository contains the source code of all of the different scenarios used to create the Harman IoT demo. 
 
 The three main scenario are listed below:
@@ -19,4 +17,12 @@ The three main scenario are listed below:
 3) Leave/Going out
 
 - The user tells a voice sensor "I'm leaving now" and the Harman IoT server will check if all SmartThing sensors are intact, notifying the user if any are open, as well as give a weather forecast update before you go out. 
+
+Extra Extra!
+------------
+"Follow Me Audio" is also included in this repo. Follow Me Audio is proximity based audio playback using the Harman SDK with iBeacons. Going from room to room in a connected home, music/ebooks/etc will continue playing!
+
+Documentation
+-------------
+http://hkiotdemo.readthedocs.org/en/latest/index.html
 
