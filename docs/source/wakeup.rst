@@ -47,9 +47,11 @@ Here are the steps that lead to choosing all the different settings for the wake
 
 8. If the user chooses the "Turn on lights" option for their alarm, the "Wake Up" page checks to see if the current user has a SmartThings token. If it doesn't, then the user is redirected to SmartThings where they can authenticate their SmartThings account and gain a token for future control of their SmartThings devices. 
 
-(At this point, you will have to go through multiple authentication pages, but rest assured, you will only have to do this once as well! We have been trying to find an easier user friendly way of handling these authentication process, but bear with us in the meantime.)
-
 9. Once the user has configured all their alarm settings, he or she taps "Set", which will trigger the "setCloudAlarm()" function on the Parse Cloud.
+
+..note:: 
+
+	If you need a SmartThings token, you will have to go through multiple authentication pages, but rest assured, you will only have to do this once as well! We have been trying to find an easier user friendly way of handling these authentication process, but bear with us in the meantime.
 
 Now We Wait...
 ~~~~~~~~~~~~~~
