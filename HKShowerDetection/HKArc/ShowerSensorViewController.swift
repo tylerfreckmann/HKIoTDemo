@@ -53,9 +53,17 @@ class ShowerSensorViewController: UIViewController {
     
     /* Callback for when stop button is pressed */
     @IBAction func stopPressed(sender: UIButton) {
+        stopBtn.enabled = false
+        
         client.stopRecordRec()
-        self.durationTimer.invalidate()
-        self.showerTimer.invalidate()
+        
+        if showerTimer != nil {
+            showerTimer.invalidate()
+        }
+        
+        if self.durationTimer != nil {
+            durationTimer.invalidate()
+        }
     }
     
     /* Initializes the ACR recorder and starts recording */
@@ -126,9 +134,6 @@ class ShowerSensorViewController: UIViewController {
                     // Shower stopped labeled
                     successLabel.text = "You finished showering!"
                     
-                    // Stop recording
-                    // client.stopRecordRec()
-                    
                     // Turn off duration timer
                     durationTimer.invalidate()
                     
@@ -137,6 +142,14 @@ class ShowerSensorViewController: UIViewController {
                         println("Stopped timer from firing!")
                         showerTimer.invalidate()
                     }
+                    
+                    // Send shower data to Parse cloud for data analytics
+                    let dimensions = [
+                        "showerDuration": "You showered for " + String(totalElapseSeconds)
+                    ]
+                    // Send the dimensions to Parse along with the 'Shower' event
+                    PFAnalytics.trackEvent("Shower", dimensions:dimensions)
+                    
                     self.showerStarted = false
                 }
             }
@@ -154,7 +167,7 @@ class ShowerSensorViewController: UIViewController {
             successLabel.text = "I hear you're showering!"
             
             // Check if first time hear shower or not
-            if (!showerStarted) {
+            if !showerStarted {
                 prepTimer()
             }
             else {
@@ -208,10 +221,8 @@ class ShowerSensorViewController: UIViewController {
         var username = PFUser.currentUser()?.username
         var timeString: String!
         
+        // Periodic alert flag on
         if timer.userInfo as! Bool {
-            // Periodic alert flag on
-            //var currentTimeInMinutes = (60 * alertCount) / 60
-            //var currentSecs = (60 * alertCount) % 60
             alertCount++
             var elapseTime = CACurrentMediaTime() - startTime
             var totalElapseSeconds = Int(elapseTime)
