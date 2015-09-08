@@ -1,5 +1,5 @@
 References
-=====================================
+==========
 
 Here are the links to the resources we used for this demo:
 
