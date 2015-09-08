@@ -9,7 +9,7 @@ The 3rd party things we used for this scenario are:
 	for turning on the lights automatically in the morning, making it easier to wake up. 
 *Weather API*
 	for weather forecast as you wake up, so you know how to dress yourself out the door. 
-*Text-To-Speech API*
+*Text-To-Speech (TTS) API*
 	for a custom greeting or reminder for youself, such as "You have a dentist appointment today!"
 
 We will be leading you through the Wake Up Scenario in the best way that we can. The numbers correspond to the numbering on the sequence diagram below.
@@ -60,7 +60,7 @@ After you've "set" the alarm, the wait begins. Everything is done behind the sce
 
 10. During the "setCloudAlarm()" function, the Parse Cloud gets weather and TTS data from external APIs to send back to the user during the alarm.
 
-11. At the designated alarm time, Parse sends a push notification to AppDelegate running in the HK Rules app on the user's iOS device, with all the configuration data concerning the alarm (alarm sound, weather/tts data, etc.).
+11. At the designated alarm time, Parse sends a push notification to AppDelegate running in the HK Rules app on the user's iOS device that includes all the configuration data concerning the alarm (alarm sound, weather/tts data, etc.).
 
 12. When the AppDelegate receives the push notification, it tells the HKWControlHandler to play the alarm media through the Harman speakers.
 

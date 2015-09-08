@@ -9,7 +9,7 @@ The 3rd party things we used for this scenario are:
 
 *ACRCloud API*
 	for sound fingerprinting. Used to differentiate when a shower is running.  
-*Text-To-Speech API*
+*Text-To-Speech (TTS) API*
 	for converting an alert text to speech to play back through the speaker.
 
 We will be leading you through the Shower Scenario in the best way that we can. The numbers correspond to the numbering on the sequence diagram below.
