@@ -23,7 +23,7 @@ Resources
 *Dark Sky Forecast API*
 	`https://developer.forecast.io/docs/v2 <https://developer.forecast.io/docs/v2>`__ 
 *ReadTheDocs*
-	'https://readthedocs.org/ <https://readthedocs.org/>'__
+	`https://readthedocs.org/ <https://readthedocs.org/>`__ 
 
 About Us
 ~~~~~~~~
