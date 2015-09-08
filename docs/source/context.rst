@@ -17,7 +17,7 @@ The entities involved in this demo are:
 Each of the things we used in this demo served a purpose. We tried to incorporate as many IoT platforms and devices as we can, but they're are just so much!
 
 Context Diagram
-===============
+~~~~~~~~~~~~~~~
 
 Below is a diagram displaying how each of how entities are connected to each other. 
 

@@ -9,7 +9,7 @@ The three main scenarios that demonstrate Harman's integration into the IoT spac
 
 
 HK Rules Application 
-====================
+~~~~~~~~~~~~~~~~~~~~
 
 The HK Rules iOS application allows the user to configure their preferences regarding each scenario. These preferences are stored in the Parse Cloud associated with a "User" object that represents the actual person using the HK Rules app. The user configures their "Wake Up" preferences in a "WakeConfig" object and their "Take a Shower" preferences in a "ShowerConfig" object.
 
@@ -17,14 +17,14 @@ HK Rules also controls the Harman speakers through the HKWControlHandler, from t
 
 
 Parse Platform
-==============
+~~~~~~~~~~~~~~
 
 Parse notifies the user of events occuring in the home through push notifications. These notifications are sent to the HK Rules app, which handles them in the AppDelegate. The AppDelegate then activates the speakers accordingly.
 
 The Parse Cloud also allows the HK Rules system to integrate with other services, such as weather updates, text-to-speech, and other IoT platforms like `SmartThings <http://www.smartthings.com/developers/>`__. The way that Parse interacts with these third parties is through "Cloud Code".
 
 External Sensors
-================
+~~~~~~~~~~~~~~~~
 
 Parse is notified of events occuring in the home through external sensors. The sensors in the demo are the "Shower Sensor" and the "Speech Sensor". 
 
@@ -35,7 +35,7 @@ How it works is the "Shower Sensor" detects when a shower is running by using th
 The "Speech Sensor" is a voice recognition iOS application that we wrote ourselves as well. It uses the Houndify API to recognize speech and convert it to usable data. Our sensor looked for specific phrases that we hardcoded in the application; specifically "I'm leaving", "I am leaving", or "I'm leaving now". Once it recognizes one of these phrases, the application would trigger an event in the cloud automatically. Something cool that we did not have time to implement, but would have loved to have was something like "Smart Phrase Learning", where if you say anything along the lines of depature of the home, it would trigger the event. 
 
 Class Diagram
-=============
+~~~~~~~~~~~~~
 
 Below is an diagram of all the different classes we designed for the demo: 
 
