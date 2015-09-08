@@ -12,9 +12,7 @@ Welcome to our demo on how the Harman Wireless HD Audio System can be integrated
 Video of the Demo
 ~~~~~~~~~~~~~~~~~
 
-You probably want to see rather than read what we're doing, so here's a video showcasing our project as a whole. 
-
-`Youtube link to video <https://www.youtube.com/watch?v=0GuJgEMhfbg>`__!
+You probably want to see rather than read what we're doing, so click `here <https://www.youtube.com/watch?v=0GuJgEMhfbg>`__for a video showcasing our project as a whole. 
 
 Architecture Overview
 ~~~~~~~~~~~~~~~~~~~~~
