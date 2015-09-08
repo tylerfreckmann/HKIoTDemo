@@ -12,14 +12,14 @@ The 3rd party things we used for this scenario are:
 *Text-To-Speech API*
 	for converting an alert text to speech to play back through the speaker.
 
-I will be leading you through the Shower Scenario in the best way I can. The numbers correspond to the numbering on the sequence diagram below.
+I will be leading you through the Shower Scenario in the best way that I can. The numbers correspond to the numbering on the sequence diagram below.
 
 Sequence Diagram
 ~~~~~~~~~~~~~~~~
 
-**Have trouble reading image?** `Click Here! <http://hkiotdemo.readthedocs.org/en/latest/_images/showersd.png>`__ 
-
 .. figure::  images/showersd.png
+
+**Is the diagram too small for you to read?** `Click Here! <http://hkiotdemo.readthedocs.org/en/latest/_images/showersd.png>`__ 
 
 Initial Setup
 ~~~~~~~~~~~~~

@@ -12,7 +12,7 @@ The 3rd party things we used for this scenario are:
 *Text-To-Speech API*
 	for a custom greeting or reminder for youself, such as "You have a dentist appointment today!"
 
-I will be leading you through the Wake Up Scenario in the best way I can. The numbers correspond to the numbering on the sequence diagram below.
+I will be leading you through the Wake Up Scenario in the best way that I can. The numbers correspond to the numbering on the sequence diagram below.
 
 Sequence Diagram
 ~~~~~~~~~~~~~~~~

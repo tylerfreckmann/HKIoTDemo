@@ -7,6 +7,8 @@ The three main scenarios that demonstrate Harman's integration into the IoT spac
 * Take a Shower
 * Leave the Home
 
+The classes we designed and created all pertain to one or more of these scenarios. We hope it's clear how each class is connected entirely to this project, but if it isn't, please definitely continue reading!
+
 
 HK Rules Application 
 ~~~~~~~~~~~~~~~~~~~~

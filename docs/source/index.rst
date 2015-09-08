@@ -3,6 +3,11 @@ Welcome to HKIoTDemo's documentation!
 
 Welcome to our demo on how the Harman Wireless HD Audio System can be integrated into the Internet of Things. The `Wireless HD Audio SDK <http://developer.harman.com>`__ allows one to develop applications that connect HD Wireless speakers to other devices in the home.
 
+
+.. note::
+
+   If you would like to check out our source code for this project, click `here <http://developer.harman.com>`__!
+
 Contents:
 
 Architecture Overview

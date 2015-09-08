@@ -12,14 +12,14 @@ The 3rd party things we used for this scenario are:
 *Text-To-Speech API*
 	for converting an text to speech to play back through the speaker.
 
-I will be leading you through the Shower Scenario in the best way I can. The numbers correspond to the numbering on the sequence diagram below.
+I will be leading you through the Leave House Scenario in the best way that I can. The numbers correspond to the numbering on the sequence diagram below.
 
 Sequence Diagram
 ~~~~~~~~~~~~~~~~
 
 .. figure::  images/leavesd.png
 
-**Have trouble seeing the image?** `Click Here! <http://hkiotdemo.readthedocs.org/en/latest/_images/leavesd.png>`__ 
+**Have trouble seeing the diagram?** `Click Here! <http://hkiotdemo.readthedocs.org/en/latest/_images/leavesd.png>`__ 
 
 Initial Setup
 ~~~~~~~~~~~~~
@@ -34,3 +34,5 @@ Using the Voice Sensor
 3. When Parse receives a notification from the voice sensor that a voice command was given (namely "I'm leaving"), Parse collects weather data, checks the house's security sensors, and compiles that information into a TTS message which it sends in a push notification to the HKRules AppDelegate running on the user's iOS device.
 
 4. When the HKRules AppDelegate receives the push notification, it plays the TTS message through the Harman speakers.
+
+And there we go! That concludes Leave House Scenario, and completes our IoT Demostration! We hope you guys were able to get it up and running, and we hoped we were able to help guide you through the process. 
