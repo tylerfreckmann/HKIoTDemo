@@ -6,7 +6,7 @@ Welcome to our demo on how the Harman Wireless HD Audio System can be integrated
 
 .. note::
 
-   If you would like to check out our source code for this project, click `here <http://developer.harman.com>`__!
+   If you would like to check out our source code for this project, click `here <https://github.com/tylerfreckmann/HKIoTDemo>`__!
 
 Contents:
 

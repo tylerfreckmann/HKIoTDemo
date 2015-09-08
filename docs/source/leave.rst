@@ -1,7 +1,7 @@
 Leave House Scenario
 ====================
 
-The "Leave House" scenario is the last scenario of our IoT demo. When you are about to leave the house for work or maybe even for a party, it'd be nice for an update as to how your house is looking, or whether or not you should be bringing an umbrella or wearing shorts due to weather. That is what this scene represents. You're notified of your home security, as well as given a weather update as you leave your home. 
+The "Leave House" scenario is the last scenario of our IoT demo. When you are about to leave the house for work or maybe even for a party, it'd be nice for an update as to how your house is looking in terms of security, or whether or not you should bring an umbrella or wear shorts due to weather. That is what this scene represents. You're notified of your home security, as well as given a weather update as you leave for the door. 
 
 The 3rd party things we used for this scenario are:
 
