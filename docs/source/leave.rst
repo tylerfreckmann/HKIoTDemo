@@ -1,11 +1,33 @@
 Leave House Scenario
 ====================
 
-**Have trouble reading image?** `Click Here! <http://hkiotdemo.readthedocs.org/en/latest/_images/leavesd.png>`__ 
+The "Leave House" scenario is the last scenario of our IoT demo. When you are about to leave the house for work or maybe even for a party, it'd be nice for an update as to how your house is looking, or whether or not you should be bringing an umbrella or wearing shorts due to weather. That is what this scene represents. You're notified of your home security, as well as given a weather update as you leave your home. 
+
+The 3rd party things we used for this scenario are:
+
+*Houndify API*
+	for speech recognization. We needed it to differentiate phrases from the user.  
+*Weather API*
+	for weather forecase notification. 
+*Text-To-Speech API*
+	for converting an text to speech to play back through the speaker.
+
+I will be leading you through the Shower Scenario in the best way I can. The numbers correspond to the numbering on the sequence diagram below.
+
+Sequence Diagram
+~~~~~~~~~~~~~~~~
 
 .. figure::  images/leavesd.png
 
+**Have trouble seeing the image?** `Click Here! <http://hkiotdemo.readthedocs.org/en/latest/_images/leavesd.png>`__ 
+
+Initial Setup
+~~~~~~~~~~~~~
+
 1. The user enters their username and password into the Voice Sensor and logs in to Parse, so the Voice Sensor knows which user to send push notifications to.
+
+Using the Voice Sensor
+~~~~~~~~~~~~~~~~~~~~~~
 
 2. The user taps the green microphone button on the voice sensor, and if the button turns red, then the sensor is recording. If the voice sensor hears a voice command, it will trigger an event in the Parse Cloud.
 
