@@ -3,11 +3,14 @@ Wake Up Scenario
 
 The "Wake Up" scenario is the first scenario of our IoT demo. It is a simulation of some of the neat things we can do with Harman speakers as a user wakes up in the morning. 
 
-The things we used for this scenario are: 
+The 3rd party things we used for this scenario are: 
 
-SmartThings for turning on the lights automatically in the morning, making it easier to wake up. 
-Weather API for weather forecast as you wake up, so you know how to dress yourself out the door. 
-Text-To-Speech API for a custom greeting or reminder for youself, such as "You have a dentist appointment today!"
+*SmartThings*
+	for turning on the lights automatically in the morning, making it easier to wake up. 
+*Weather API*
+	for weather forecast as you wake up, so you know how to dress yourself out the door. 
+*Text-To-Speech API*
+	for a custom greeting or reminder for youself, such as "You have a dentist appointment today!"
 
 I will be leading you through the Wake Up Scenario in the best way I can. The numbers correspond to the numbering on the sequence diagram below.
 
@@ -15,7 +18,6 @@ Sequence Diagram
 ~~~~~~~~~~~~~~~~
 
 .. figure::  images/wakeupsd.png
-
 
 **Is the image above too hard for you to read?** `Click Here! <http://hkiotdemo.readthedocs.org/en/latest/_images/wakeupsd.png>`__ 
 
@@ -45,14 +47,14 @@ Here are the steps that lead to choosing all the different settings for the wake
 
 8. If the user chooses the "Turn on lights" option for their alarm, the "Wake Up" page checks to see if the current user has a SmartThings token. If it doesn't, then the user is redirected to SmartThings where they can authenticate their SmartThings account and gain a token for future control of their SmartThings devices. 
 
-(At this point, you will have to go through multiple authentication pages, but rest assured, you will only have to do this once as well! We have been trying to find an easier user friendly way of handling these authentication process, but bear with us.)
+(At this point, you will have to go through multiple authentication pages, but rest assured, you will only have to do this once as well! We have been trying to find an easier user friendly way of handling these authentication process, but bear with us in the meantime.)
 
 9. Once the user has configured all their alarm settings, he or she taps "Set", which will trigger the "setCloudAlarm()" function on the Parse Cloud.
 
 Now We Wait...
 ~~~~~~~~~~~~~~
 
-After you've "set" the alarm, the wait begins! Everything is done behind the scenes from the user perspective. 
+After you've "set" the alarm, the wait begins. Everything is done behind the scenes from the user perspective. 
 
 10. During the "setCloudAlarm()" function, the Parse Cloud gets weather and TTS data from external APIs to send back to the user during the alarm.
 
@@ -62,4 +64,4 @@ After you've "set" the alarm, the wait begins! Everything is done behind the sce
 
 13. When Parse sends the push notification, it also tells the SmartThings platform to turn on the user's lights (using the User's SmartThings authentication token from step 8).
 
-And voila! The wake up scenario is done. Wasn't that cool! 
+And voila! The wake up scenario is done. Wasn't that cool?!
