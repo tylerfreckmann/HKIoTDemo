@@ -1,5 +1,11 @@
+AboutUs
+=======
+This Internet of Things Demonstration was designed and implemented by Tyler Freckmann and Eric Tran. 
+
+If you would like to see the source codefor this project, go `https://github.com/tylerfreckmann/HKIoTDemo <here>`__ 
+
 References
-==========
+~~~~~~~~~~
 
 Here are the links to the resources we used for this demo:
 
