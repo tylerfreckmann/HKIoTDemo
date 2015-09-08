@@ -14,8 +14,6 @@ Video of the Demo
 
 You probably want to see rather than read what we're doing, so here's a video showcasing our project as a whole. 
 
-.. youtube:: <0GuJgEMhfbg>
-
 `Youtube link to video <https://www.youtube.com/watch?v=0GuJgEMhfbg>`__!
 
 Architecture Overview
