@@ -24,7 +24,7 @@ Sequence Diagram
 Initial Setup
 ~~~~~~~~~~~~~
 
-Here, we have to set up the initial settings. We sign up once so have access to all the features, afterwards, you never have to login again, unless of course, you logged out for some reason. 
+Here, we have to set up the initial settings. We sign up once so we have access to all the features, afterwards, you never have to login again, unless of course, you logged out for some reason. 
 
 1. The user starts the HK Rules iOS app and enters their username, password, email, and name into the "Sign Up" page. The information is used to associate the user with Parse for configuration purposes. 
 
@@ -51,7 +51,7 @@ Here are the steps that lead to choosing all the different settings for the wake
 
 .. note:: 
 
-	If you need a SmartThings token, you will have to go through multiple authentication pages, but rest assured, you will only have to do this once as well! We have been trying to find an easier user friendly way of handling these authentication process, but bear with us in the meantime.
+	If you need a SmartThings token, you will have to go through multiple authentication pages, but rest assured, you will only have to do this once as well! We have been trying to find a more user friendly way of handling this authentication process, but bear with us in the meantime.
 
 Now We Wait...
 ~~~~~~~~~~~~~~
