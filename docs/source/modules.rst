@@ -9,7 +9,7 @@ The three main scenarios that demonstrate Harman's integration into the IoT spac
 
 
 HK Rules Application 
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 The HK Rules iOS application allows the user to configure their preferences regarding each scenario. These preferences are stored in the Parse Cloud associated with a "User" object that represents the actual person using the HK Rules app. The user configures their "Wake Up" preferences in a "WakeConfig" object and their "Take a Shower" preferences in a "ShowerConfig" object.
 
