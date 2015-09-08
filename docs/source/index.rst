@@ -16,6 +16,8 @@ You probably want to see rather than read what we're doing, so here's a video sh
 
 .. youtube:: <0GuJgEMhfbg>
 
+<https://www.youtube.com/watch?v=0GuJgEMhfbg/>
+
 Architecture Overview
 ~~~~~~~~~~~~~~~~~~~~~
 

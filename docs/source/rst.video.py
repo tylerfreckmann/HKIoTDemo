@@ -22,7 +22,6 @@ from __future__ import absolute_import
 from docutils import nodes
 from docutils.parsers.rst import Directive, directives
 
-
 def align(argument):
     """Conversion function for the "align" option."""
     return directives.choice(argument, ('left', 'center', 'right'))
