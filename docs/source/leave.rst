@@ -3,7 +3,7 @@ Leave House Scenario
 
 The "Leave House" scenario is the last scenario of our IoT demo. When you are about to leave the house for work or maybe even for a party, it'd be nice for an update as to how your house is looking in terms of security, or whether or not you should bring an umbrella or wear shorts due to weather. That is what this scene represents. You're notified of your home security, as well as given a weather update as you leave for the door. 
 
-We also did not have a voice recoginization sensor of our own, so we had to emulate that feature as well. Houndify API did exactly what we wanted, and we were very glad to have got that working. 
+We also did not have a voice recognization sensor of our own, so we had to emulate that feature as well. Houndify API did exactly what we wanted, and we were very glad to have got that working. 
 
 The 3rd party things we used for this scenario are:
 
