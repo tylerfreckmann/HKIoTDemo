@@ -27,6 +27,6 @@ Resources
 
 About Us
 ~~~~~~~~
-This demonstration was designed and implemented by Tyler Freckmann and Eric Tran. 
+This demonstration was designed and implemented by `Tyler Freckmann <https://www.linkedin.com/in/tylerfreckmann>`__ and `Eric Tran <https://www.linkedin.com/in/erictritran>`__. 
 
 If you would like to see the source code for this project, go `here <https://github.com/tylerfreckmann/HKIoTDemo>`__!
