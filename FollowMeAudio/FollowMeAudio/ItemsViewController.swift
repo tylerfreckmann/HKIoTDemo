@@ -22,9 +22,6 @@ struct MusicInfo {
     var songPersistentID: MPMediaEntityPersistentID!
 }
 
-// User inputted level
-var volumeOffset = 0
-
 class ItemsViewController: UIViewController {
 
     @IBOutlet weak var itemsTableView: UITableView!
@@ -79,6 +76,7 @@ class ItemsViewController: UIViewController {
                 println("InitializeHKWirelessControl - OK");
                 
                 self.HKWControl = HKWControlHandler.sharedInstance()
+                self.HKWControl.setVolume(0)
 
                 // dismiss the network initialization dialog
                 if self.g_alert != nil {
@@ -240,7 +238,9 @@ class ItemsViewController: UIViewController {
         if beacon.proximity == CLProximity.Immediate || beacon.proximity == CLProximity.Near {
             var volumeLvl = changeVolumeBasedOnRange(beacon)
             HKWControl.setVolumeDevice(currentDevice.deviceId, volume: volumeLvl)
-            println("Beacon major: \(beacon.major.intValue) | minor: \(beacon.minor.intValue) | volume: \(volumeLvl) | rssi: \(beacon.rssi)");
+            
+            // Debugging print to check which speaker is playing
+            // println("Beacon major: \(beacon.major.intValue) | minor: \(beacon.minor.intValue) | volume: \(volumeLvl) | rssi: \(beacon.rssi)");
     
             // Uncomment if you want app to start playing automatically when in range of beacons
             //
@@ -251,8 +251,14 @@ class ItemsViewController: UIViewController {
         }
         // If beacon is 'Far' or 'Unknown' (out of reach), turn down the volume of that speaker to 0
         else {
-            
-            HKWControl.setVolumeDevice(currentDevice.deviceId, volume: 0)
+            // This condition allows for fading out...
+            if currentDevice.volume >= 3 {
+                HKWControl.setVolumeDevice(currentDevice.deviceId, volume: currentDevice.volume - 3)
+            }
+            else {
+                HKWControl.setVolumeDevice(currentDevice.deviceId, volume: currentDevice.volume - 0)
+
+            }
         }
     
     }
@@ -307,10 +313,10 @@ class ItemsViewController: UIViewController {
         case CLProximity.Far:
             break;
         case CLProximity.Near:
-            volume = 15 + volumeOffset;
+            volume = 15
             break;
         case CLProximity.Immediate:
-            volume = 10 + volumeOffset;
+            volume = 10 
             break;
         case CLProximity.Unknown:
             break;
@@ -324,7 +330,6 @@ class ItemsViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let segueName = segue.identifier
         if segueName == "goToSettingsVC" {
-            println("got here prepToSegue")
             var destVC: SettingsVC = segue.destinationViewController as! SettingsVC
             destVC.musicInfo = musicInfo
         }
