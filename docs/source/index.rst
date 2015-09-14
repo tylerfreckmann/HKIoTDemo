@@ -20,7 +20,11 @@ Using Harman SDK, we were able to connect their speakers with other APIs and pla
 
 Challenges we ran into
 ~~~~~~~~~~~~~~~~~~~~~~
-Brainstorming and figuring the different possible APIs we could use in this demo was tough. The amount of public APIs out there is outstanding, and filtering out the choices for the purpose of our demos was fun task. Other challenges we ran into include figuring out what the best platform as a service would be. We had to also consider how to acheive the best user experience as well. 
+Brainstorming and figuring the different possible APIs we could use in this demo was a tough process. The amount of public APIs available to use is outstanding, and filtering out the choices for the purpose of our demos was difficult task. Other challenges we ran into include figuring out what the best platform as a service would be, and that eventually led us to using Facebook's Parse. 
+
+Throughout the design phase of this demo, we had issues on how to structure the entire architecture. We wanted an easy to read setup for developers (in terms of code), as well as an easy to use setup for consumers (in terms of usability). 
+
+A main challenge we have noted and hope to make more efficient is how authentication was handled in this demo. On the first run, the user had to authenticate with SmartThings and Parse multiple times in order to have the feature of "turning on the light" as he/she wakes up. Having multiple authentication screens lessens the user experience. And additionally, all the third party sensors required a Parse login to connect to the platform and our main "Hub". Our goal in the future is to minimalize the amount of authentication screens used. 
 
 Architecture Overview
 ~~~~~~~~~~~~~~~~~~~~~

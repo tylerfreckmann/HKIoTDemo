@@ -26,6 +26,8 @@ Sequence Diagram
 Initial Setup
 ~~~~~~~~~~~~~
 
+Here, we only have to login once to the same user we created in the "Wake Up" scenario. This is the user in which the app will send the push notification to once it hears a key phrase. 
+
 1. The user enters their username and password into the Voice Sensor and logs in to Parse, so the Voice Sensor knows which user to send push notifications to.
 
 Using the Voice Sensor
