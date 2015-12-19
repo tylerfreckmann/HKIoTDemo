@@ -12,7 +12,7 @@ The entities involved in this demo are:
 *Speech Sensor*
 	iOS application representing a voice recognition sensor. 
 *SmartThings*
-	Third party IoT devices such as contact sensors, temperature sensors, etc. (`SmartThings <http://www.smartthings.com/developers/>`__ )
+	Third party IoT devices such as contact sensors, temperature sensors, etc. (`SmartThings <http://hksmartthingsintegration.readthedocs.org/en/latest/overview.html>`__ )
 
 Each of the things we used in this demo served a purpose. We tried to incorporate as many IoT platforms and devices as we can, but they're are just so much!
 
